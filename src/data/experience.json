@@ -1,34 +1,20 @@
 {
   "experiences": [
     {
-      "id": "bytedance-ai-service",
+      "id": "bytedance-mlops",
       "company": "字节跳动",
       "englishCompany": "ByteDance",
-      "role": "商业产品实习生 · 线索广告-AI智能客服",
-      "location": "上海",
-      "period": "2024.12 - 至今",
-      "summary": "负责智能接待产品的对话体验优化与功能易用性调优，通过对话策略设计与交互优化提升智能客服的留资转化。",
+      "role": "模型运维（MLOps）",
+      "location": "北京",
+      "period": "2025.12 - now",
+      "summary": "建设业务模型 MLOps、自动评测与推理部署体系，支撑推荐召回、内容理解模型的高 QPS 服务与快速上线。",
       "highlights": [
-        "基于海量线上会话数据进行归因分析，重构大语言模型在端侧的输出策略，在保证业务目标前提下改善 C 端用户对话体验。",
-        "针对 B 端人工客服痛点，设计并落地基于“大模型思维链 + 历史语义检索”的智能话术推荐系统，提升效率。",
-        "针对复杂 ToB 系统的配置门槛痛点，制定自动化配置诊断链路，推动平台易用性的整体迭代。"
+        "建设模型 MLOps、自动评测与推理部署体系，保障核心模型稳定上线与持续迭代。",
+        "搭建数据挖掘、送标、训练到评测迭代的自动化闭环，结合 AI Agent 和 LLM 降低人工成本并加速模型更新。",
+        "负责核心模型训练与调优，优化损失函数、表征学习与偏好数据利用，提升复杂边界场景下的泛化能力。",
+        "面向长尾样本与类别不均问题，构建 LLM 数据蒸馏、合成与自动质检流水线，持续供给高质量增强数据。"
       ],
-      "tech": ["LLM", "Conversational UX", "Data Analysis", "Product Strategy"]
-    },
-    {
-      "id": "lpealeap-avatar",
-      "company": "像素跃迁",
-      "englishCompany": "LPEALEAP",
-      "role": "产品经理 · AI虚拟人智能音箱",
-      "location": "杭州",
-      "period": "2022.06 - 2023.12",
-      "summary": "担任初创团队产品经理，负责适老化 AI 虚拟人助手“小数”的产品定位、交互逻辑设计与 AI 策略优化。",
-      "highlights": [
-        "深入洞察银发族群体的数字鸿沟痛点，确立“情感陪伴 + 生活助手”的拟人化 AI 角色定位。",
-        "整合华数集团线下社区服务网络资源，推动产品从概念孵化到商业落地。",
-        "构建多维用户画像结构化数据集，并参与跨模态数据采集与清洗标准制定。"
-      ],
-      "tech": ["AI Avatar", "Elderly UX", "Service Design", "Multimodal Data"]
+      "tech": ["MLOps", "LLM", "Data Flywheel", "Model Evaluation", "Inference Deployment"]
     }
   ]
 }

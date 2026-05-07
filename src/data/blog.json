@@ -1,31 +1,31 @@
 {
   "posts": [
     {
-      "id": "claude-code-portfolio",
-      "title": "Claude Code 实践技巧：以 Vibe Coding 个人网站为例",
-      "date": "2026.03.16",
-      "summary": "分享使用 Claude Code 开发个人网站的实践经验，包括协作 planning、数据分离设计、Figma MCP 集成等技巧。",
-      "tags": ["Claude Code", "Vibe Coding", "AI 编程", "个人网站"],
+      "id": "mlops-data-flywheel",
+      "title": "业务模型 MLOps：从数据挖掘到自动化评测的闭环",
+      "date": "2026.03.30",
+      "summary": "整理高 QPS 内容理解模型从数据挖掘、送标、训练、评测到推理部署的工程化闭环，以及 AI Agent 在降本提效中的作用。",
+      "tags": ["MLOps", "Data Flywheel", "Model Evaluation", "LLM"],
       "pinned": true,
-      "link": "https://example.com/blog/claude-code-portfolio"
+      "link": "https://jasperhu.cc"
     },
     {
-      "id": "openclaw-guide",
-      "title": "OpenClaw 信息摘取：总结全网 OpenClaw 使用技巧和心得",
-      "date": "2026.03.27",
-      "summary": "通过指令要求 OpenClaw 以 AI 技术分析师视角，系统整理 OpenClaw 2026 的核心使用技巧、避坑指南和进阶配置。",
-      "tags": ["OpenClaw", "AI 助手", "CLI 工具", "自动化", "技巧总结"],
+      "id": "dpo-triplet-preference",
+      "title": "多模态召回中的 DPO 偏好优化与 Triplet 标注",
+      "date": "2026.02.28",
+      "summary": "复盘相似召回模型在硬标签噪声和模糊边界样本下的优化思路，包括软/硬 margin、cosine 约束和自动化评测。",
+      "tags": ["DPO", "Preference Learning", "Multimodal Retrieval", "HNSW"],
       "pinned": false,
-      "link": "https://example.com/blog/openclaw-guide"
+      "link": "https://jasperhu.cc"
     },
     {
-      "id": "uist25-hci",
-      "title": "人机交互顶会 UIST 25 论文主题 & Idea 速刷",
-      "date": "2025.10.13",
-      "summary": "整理 UIST 2025 人机交互顶会的论文主题和创新 Idea，了解最新研究趋势。",
-      "tags": ["UIST", "HCI", "人机交互", "论文速读"],
+      "id": "agentic-data-distillation",
+      "title": "Agentic 数据蒸馏：从 badcase 到高质量增强样本",
+      "date": "2026.02.20",
+      "summary": "总结基于示例库、规则库、生成 Agent 和 LLM-as-Judge 的数据蒸馏链路，用于改善长尾样本和类别不均问题。",
+      "tags": ["Agent", "Data Distillation", "LLM-as-Judge", "Prompt Harness"],
       "pinned": false,
-      "link": "https://example.com/blog/uist25"
+      "link": "https://jasperhu.cc"
     }
   ]
 }

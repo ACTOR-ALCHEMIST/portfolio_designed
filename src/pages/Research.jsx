@@ -7,7 +7,7 @@ export default function Research() {
       <header className="page-header">
         <h1>科研经历</h1>
         <p>
-          研究关注 Human-AI Interaction、AI 辅助设计工具和创造力支持，强调技术能力与体验价值之间的认知对齐。
+          研究与实验方向围绕 AI 文本检测、低资源部署、RAG 推理优化、自动化评估和训练框架工程化。
         </p>
       </header>
 

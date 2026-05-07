@@ -1,38 +1,38 @@
 {
   "papers": [
     {
-      "id": "human-ai-alignment",
-      "title": "Reasoning-Driven Synthetic Interaction for Human-AI Alignment",
-      "subtitle": "面向人机协同的认知对齐与交互策略研究",
-      "authors": ["Zhuyu Teng", "Lingyun Sun"],
-      "venue": "CHI 2026",
-      "period": "2026.03",
+      "id": "ai-text-detection-mlops",
+      "title": "AI 文本检测与 MLOps",
+      "subtitle": "LREC 2026 论文项目 · University of Galway",
+      "authors": ["Hu Jiang"],
+      "venue": "LREC 2026 Project",
+      "period": "2024.12 - 2025.11",
       "image": "/assets/research-human-ai.svg",
-      "imageAlt": "Human AI alignment research diagram",
-      "abstract": "本研究关注人与 AI 交互过程中的认知对齐问题，探索如何利用推理驱动的合成交互数据改善 AI 辅助系统的可解释性、响应一致性与用户信任。",
-      "keywords": ["Human-AI Interaction", "Cognitive Alignment", "Synthetic Data", "Explainability"],
+      "imageAlt": "AI text detection and MLOps research diagram",
+      "abstract": "构建自动化数据处理流水线，利用 LLM API 合成 26K 高质量样本，并存入 PostgreSQL 进行版本管理；开发可扩展 AI 训练框架，集成对比学习与 EvoLORA 算法，实现自动化超参调优。",
+      "keywords": ["AI Text Detection", "MLOps", "PyTorch", "Contrastive Learning", "EvoLORA", "GCP"],
       "links": [
         {
-          "label": "Paper",
-          "href": "https://example.com/paper"
+          "label": "OpenReview",
+          "href": "https://openreview.net/forum?id=pnz8LRGgXT"
         }
       ]
     },
     {
-      "id": "creativity-support",
-      "title": "AI-assisted Creativity Support in Early-stage Design",
-      "subtitle": "AI 辅助设计工具中的创造力支持机制",
-      "authors": ["Zhuyu Teng"],
-      "venue": "Design Research Notes",
-      "period": "2025.10",
-      "image": "/assets/research-creativity.svg",
-      "imageAlt": "Creativity support research workflow diagram",
-      "abstract": "研究梳理 AI 在早期设计过程中的介入方式，重点分析提示、草图、评价与迭代环节如何共同影响设计者的探索空间和决策质量。",
-      "keywords": ["Creativity Support", "AI Design Tools", "UX Research", "Design Process"],
+      "id": "rag-local-llm-evaluation",
+      "title": "FastLite Local LLM Engine",
+      "subtitle": "轻量化 RAG、量化推理与 Agent 自动化评估",
+      "authors": ["Hu Jiang", "Tech Arena 2025 Team"],
+      "venue": "Huawei Ireland Research Institute Tech Arena 2025",
+      "period": "2025.09",
+      "image": "/assets/project-rag.svg",
+      "imageAlt": "Local LLM engine research and evaluation preview",
+      "abstract": "在无官方工具支持下，自主设计 LLM Agent 自动化评估框架，结合本地轻量化 RAG、8-bit/4-bit 量化、多线程批处理与异步推理，验证低资源环境下的高效推理系统。",
+      "keywords": ["RAG", "Quantization", "LLM Agent", "Evaluation", "CPU Inference"],
       "links": [
         {
-          "label": "Notes",
-          "href": "https://example.com/notes"
+          "label": "GitHub",
+          "href": "https://github.com/ACTOR-ALCHEMIST/FastLite-Local-LLM-Engine"
         }
       ]
     }

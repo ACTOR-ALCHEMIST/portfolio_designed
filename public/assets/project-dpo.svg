@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">DPO training optimization preview</title>
+  <desc id="desc">A clean diagram of triplet preference training and evaluation metrics.</desc>
+  <rect width="960" height="540" fill="#f7f8fa"/>
+  <rect x="72" y="72" width="816" height="396" rx="30" fill="#fff" stroke="#e4e7eb" stroke-width="2"/>
+  <g fill="#eef3f8" stroke="#dce4ec" stroke-width="2">
+    <rect x="130" y="150" width="172" height="118" rx="18"/>
+    <rect x="394" y="150" width="172" height="118" rx="18"/>
+    <rect x="658" y="150" width="172" height="118" rx="18"/>
+  </g>
+  <path d="M310 210h74M574 210h74" stroke="#2f6fdd" stroke-width="8" stroke-linecap="round"/>
+  <path d="M358 184l26 26-26 26M622 184l26 26-26 26" fill="none" stroke="#2f6fdd" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-weight="800" fill="#20242a">
+    <text x="176" y="221" font-size="28">Query</text>
+    <text x="432" y="221" font-size="28">Prefer</text>
+    <text x="702" y="221" font-size="28">Reject</text>
+    <text x="128" y="354" font-size="42">DPO +7.45pp</text>
+  </g>
+  <path d="M130 390h650" stroke="#e4e7eb" stroke-width="18" stroke-linecap="round"/>
+  <path d="M130 390h492" stroke="#2f6fdd" stroke-width="18" stroke-linecap="round"/>
+</svg>

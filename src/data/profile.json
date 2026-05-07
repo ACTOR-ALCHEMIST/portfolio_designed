@@ -1,42 +1,78 @@
 {
-  "name": "Zhuyu Teng",
-  "chineseName": "滕朱瑜",
-  "title": "AI Product Manager / Researcher",
+  "name": "胡江",
+  "chineseName": "Jasper Hu",
+  "title": "AI | MLOps",
   "avatar": "/assets/avatar.png",
-  "greeting": "Hey there",
-  "headline": "I'm Zhuyu Teng.",
-  "tagline": "Pragmatic by mind, human by heart. | 数据视角驱动决策，体验视角打磨产品",
-  "introEnglish": "I am an explorer with a background in design and computer science, currently pursuing my Master's degree in Design at the College of Computer Science and Technology, Zhejiang University. My core interests and research focus on cognitive alignment in Human-AI interaction, the application of AI-assisted design tools, and creativity support. I am currently actively seeking internship and full-time opportunities as an AI Product Manager.",
-  "introChinese": "我是一名兼具设计与计算机双重背景的探索者，目前在浙江大学计算机科学与技术学院攻读设计学硕士学位。我的核心兴趣与研究方向聚焦于人与 AI 交互过程中的认知对齐、AI 辅助设计工具的应用，以及创造力支持。致力于在 AI 时代，成为务实的理想主义者。",
+  "greeting": "Hello",
+  "headline": "I'm Hu Jiang.",
+  "tagline": "AI engineering, MLOps, LLM systems, and data flywheels.",
+  "introEnglish": "I work on AI infrastructure and MLOps for high-QPS model systems, with hands-on experience across data mining, model training, automated evaluation, inference deployment, and LLM/Agent-driven data distillation. My recent work focuses on multimodal content understanding, preference optimization, synthetic data generation, and production-grade model iteration loops.",
+  "introChinese": "我关注 AI 工程化与模型运维，主要经验覆盖数据挖掘、送标、训练、自动化评测、推理部署和数据飞轮闭环。近期工作聚焦多模态内容理解、DPO 偏好优化、LLM 数据蒸馏、Agentic 数据生产与高 QPS 模型上线体系。",
+  "email": "hujiang2001@foxmail.com",
+  "phone": "15348452000",
+  "website": "https://jasperhu.cc",
   "socialLinks": [
     {
       "label": "GitHub",
-      "href": "https://github.com/",
+      "href": "https://github.com/ACTOR-ALCHEMIST",
       "type": "github"
     },
     {
-      "label": "Google Scholar",
-      "href": "https://scholar.google.com/",
-      "type": "scholar"
+      "label": "jasperhu.cc",
+      "href": "https://jasperhu.cc",
+      "type": "website"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:hujiang2001@foxmail.com",
+      "type": "email"
     }
   ],
-  "location": "杭州，中国",
+  "location": "北京 / 朝阳",
   "skills": [
-    "Human-AI Interaction",
-    "AI Product Strategy",
-    "UX Research",
-    "Design Systems",
-    "Prompt Engineering",
-    "Data-informed Decisions"
+    "AI: PyTorch, Hugging Face, LangChain, LangGraph, RAG, LLM Fine-Tuning (LoRA), Apache Spark MLlib",
+    "开发: Python, Java, Spring Boot, FastAPI, React/Next.js, PostgreSQL, MySQL",
+    "VibeCoding: Claude Code Skills, Codex, Skills 编写",
+    "运维: Git, Docker, CI/CD, GitHub Actions, GCP Cloud Run, Merlin, HDFS"
+  ],
+  "awards": [
+    {
+      "title": "湖南省普通高等学校 2024 届创新创业优秀毕业生（前 0.1%）",
+      "date": "2024.06"
+    },
+    {
+      "title": "爱尔兰国立高威大学优秀奖学金（Merit Scholarship）",
+      "date": "2024.09"
+    },
+    {
+      "title": "华为爱尔兰研究所 Tech Arena 2025 黑客松第二名（2/19）",
+      "date": "2025.09"
+    }
+  ],
+  "openSource": [
+    {
+      "title": "NextChat (84k+ stars) 贡献者",
+      "summary": "重构 API 支持多模态模型流式响应，集成思维链模型，并编写 TypeScript 规则完成请求内容自动适配与检测。",
+      "link": "https://github.com/ChatGPTNextWeb/NextChat/pull/6457"
+    },
+    {
+      "title": "LeetCode Glance",
+      "summary": "独立开发 macOS Widget，已收录于 Übersicht 官方插件库。",
+      "link": "https://tracesof.net/uebersicht-widgets/#leetcode-glance"
+    }
   ],
   "news": [
     {
-      "date": "2026.03",
-      "title": "论文接收于 CHI（CCF A）2026 · 巴塞罗那"
+      "date": "2025.12",
+      "title": "加入字节跳动，从事模型运维（MLOps）与内容理解模型工程化工作"
     },
     {
-      "date": "2025.12",
-      "title": "加入字节跳动-线索广告-AI智能客服业务 商业产品实习生"
+      "date": "2025.09",
+      "title": "华为爱尔兰研究所 Tech Arena 2025 黑客松获得第二名"
+    },
+    {
+      "date": "2025.11",
+      "title": "University of Galway MSc in Computer Science (AI) 毕业，一等学位"
     }
   ]
 }

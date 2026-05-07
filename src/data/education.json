@@ -1,30 +1,26 @@
 {
   "schools": [
     {
-      "id": "zju-master",
-      "name": "浙江大学",
-      "englishName": "Zhejiang University",
-      "degree": "硕士",
-      "major": "计算机科学与技术学院-设计学",
-      "period": "2024.09 - 至今",
-      "honors": ["优秀研究生（1次）"],
-      "courses": ["人机交互", "设计研究方法", "人工智能产品设计"]
+      "id": "galway-ai-master",
+      "name": "University of Galway",
+      "englishName": "爱尔兰高威大学",
+      "degree": "理学硕士",
+      "major": "Computer Science - Artificial Intelligence",
+      "period": "2025.11",
+      "summary": "一等学位，约 GPA 3.9",
+      "honors": ["Merit Scholarship"],
+      "courses": ["NLP", "LLMs", "RAG", "对比学习", "多模态", "强化学习"]
     },
     {
-      "id": "zju-bachelor",
-      "name": "浙江大学",
-      "englishName": "Zhejiang University",
-      "degree": "本科",
-      "major": "计算机科学与技术学院-工业设计",
-      "period": "2020.09 - 2024.06",
-      "summary": "综合排名 2/54 (GPA 4.6/5)",
-      "honors": [
-        "国家奖学金（1次）",
-        "浙江省优秀毕业生",
-        "浙江大学一等奖学金（2次）",
-        "浙江大学优秀学生（2次）"
-      ],
-      "courses": ["用户研究", "交互设计", "产品系统设计", "数据可视化"]
+      "id": "hieu-cs-bachelor",
+      "name": "湖南涉外经济学院",
+      "englishName": "Hunan International Economics University",
+      "degree": "工学学士",
+      "major": "计算机科学",
+      "period": "2024.06",
+      "summary": "校省级优秀毕业生，均分 86.7",
+      "honors": ["湖南省普通高等学校 2024 届创新创业优秀毕业生"],
+      "courses": ["计算机科学基础", "软件工程", "数据库系统", "机器学习"]
     }
   ]
 }

@@ -1,55 +1,79 @@
 {
   "projects": [
     {
-      "id": "eyesay",
-      "name": "基于大模型的社交辅助沟通工具",
-      "period": "2023.03 - 2023.09",
-      "image": "/assets/project-eyesay.png",
-      "imageAlt": "EyeSay social communication assistant interface preview",
-      "summary": "EyeSay 是一款专为中风、帕金森及渐冻症等重度失能群体设计的人格化辅助沟通工具。",
-      "details": "该方案利用 Apple 的 ARKit 技术实现低成本眼动追踪交互，有效降低患者的使用门槛。通过集成 GPT-4 大语言模型，系统能够结合话题偏好与社交亲密度两个核心维度，预测并生成个性化回复。",
-      "role": "产品设计 / 交互研究 / 原型开发",
-      "tech": ["GPT-4", "ARKit", "iPadOS", "Accessibility", "Human-AI Interaction"],
+      "id": "douyin-dpo-simv2",
+      "name": "多模态表意模型 DPO 训练优化与自动化评测",
+      "period": "2025.12 - 2026.02",
+      "image": "/assets/project-dpo.svg",
+      "imageAlt": "DPO training optimization and automated evaluation diagram",
+      "summary": "面向抖音视频相似召回场景，在成熟 SimV2 表意模型基线上引入偏好数据驱动的 DPO 后训练方案。",
+      "details": "SimV2 已基于百万级相似监督数据完成主训练，指标进入平台期；边界样本存在硬标签噪声，模型难以学习细粒度相似关系。项目通过 Triplet 偏好标注、软/硬 margin 约束和自动化评测流水线，提升模型对模糊边界 case 的判别能力。",
+      "role": "模型训练优化 / 数据挖掘送标 / 自动化评测",
+      "tech": ["DPO", "Triplet Preference", "HNSW", "Multimodal Retrieval", "MLOps"],
       "highlights": [
-        "设计面向重度失能群体的低门槛眼动交互流程。",
-        "将话题偏好和社交关系作为生成回复的上下文维度。",
-        "完成从用户需求、交互模型到高保真原型的完整验证。"
+        "构建 Triplet 偏好标注体系，定向挖掘并送标 10w+ 三元组视频数据。",
+        "通过软/硬 margin 建模 query-candidate 相对相似性，并对“不确定”样本增加 cosine 差值趋近 0 约束。",
+        "搭建自动化评测流水线，支持 28 个类别、50w+ 测试样本批量评测。",
+        "基于 HNSW 优化百万级召回库检索效率，将评测任务平均耗时降低 30%。",
+        "软 margin 方案准确率由 78.37% 提升至 85.82%（+7.45pp）。"
       ],
-      "link": "https://example.com/eyesay"
+      "link": "https://example.com/douyin-dpo-simv2"
     },
     {
-      "id": "eldercare-avatar",
-      "name": "适老化 AI 虚拟人对话产品",
-      "period": "2022.05 - 2023.12",
-      "image": "/assets/project-eldercare.png",
-      "imageAlt": "Elderly AI avatar smart speaker product preview",
-      "summary": "小数是一款智能家居产品，形态是 AI 虚拟人对话音箱，面向老年人的日常咨询与陪伴服务。",
-      "details": "产品将全息投影与 AI 虚拟助手相结合，依赖华数集团线下社区网络资源，通过日常问答帮助老年人获取咨询和服务，并在真实社区场景中持续迭代。",
-      "role": "产品经理 / 体验策略 / 数据结构设计",
-      "tech": ["AI Avatar", "Service Design", "Voice Interaction", "Elderly Care"],
+      "id": "qwen3-vl-sft-classification",
+      "name": "多模态内容分类模型 SFT",
+      "period": "2026.02 - 2026.03",
+      "image": "/assets/project-sft.svg",
+      "imageAlt": "Qwen3-VL SFT multimodal classification diagram",
+      "summary": "面向懂车帝图文内容审核与标签自动化场景，基于 Qwen3-VL 构建自动分类系统，替代人工标注多模态内容。",
+      "details": "项目设计标签 Token 化的生成式分类框架，通过 special token 表达标签，并修改 allowed_token_ids 支持大量 label 的高精度分类；基于 LlamaFactory 完成 SFT 微调，并使用 vLLM 与动态潮汐资源完成上线部署。",
+      "role": "多模态模型微调 / 分类框架设计 / 推理部署",
+      "tech": ["Qwen3-VL", "SFT", "LlamaFactory", "vLLM", "A100", "A30"],
       "highlights": [
-        "定义“生活助手 + 情感陪伴”的适老化虚拟人产品定位。",
-        "沉淀多维用户画像数据结构，用于后续个性化对话策略。",
-        "推动概念原型、线下社区试点和商业落地之间的衔接。"
+        "挖掘 10w+ 图文训练集，完成多模态训练数据构建。",
+        "设计 special token = 标签的生成式分类方案，支持大量 label 扩展。",
+        "基于 vLLM + A100/A30 动态潮汐资源完成上线部署，支撑 25+ QPS。",
+        "25 个标签平均准确率由纯 Prompt Engineering 的 60% 提升至 95%。",
+        "推动机标替代人工审核，预计节省 16 人力，实现 30% 数据免审。"
       ],
-      "link": "https://example.com/eldercare"
+      "link": "https://example.com/qwen3-vl-sft"
     },
     {
-      "id": "chasing",
-      "name": "《Chasing》基于 Oculus 的跑酷游戏",
-      "period": "2021.11 - 2022.02",
-      "image": "/assets/project-chasing.png",
-      "imageAlt": "Chasing Oculus parkour game visual preview",
-      "summary": "《Chasing》是一款数据朋克风跑酷游戏，玩家以第一人称视角在抽象赛博空间中完成躲避与追逐。",
-      "details": "项目探索 VR 场景中的节奏控制、冷暖色对比和高速视觉反馈，通过空间深度和动态障碍物塑造沉浸式压力感。",
-      "role": "概念设计 / 视觉系统 / Unity 原型",
-      "tech": ["Oculus", "Unity", "VR Interaction", "Game Design"],
+      "id": "push-risk-agentic-distillation",
+      "name": "Push 风控模型 Agentic 数据蒸馏系统",
+      "period": "2026.02 - now",
+      "image": "/assets/project-agentic.svg",
+      "imageAlt": "Agentic data distillation pipeline diagram",
+      "summary": "面向 Push 风控模型线上 badcase 误判问题，构建 Agentic 数据蒸馏与自动质检系统，改善正例稀缺和标签分布不均衡问题。",
+      "details": "项目基于 Qwen-4B-Embedding 构建 badcase 示例库与规则知识库，完成同标签 case 聚类召回与 case-rule 自动匹配，并编排生成 Agent、Rule Matching Agent 和质检链路，支持批量数据生产与过滤。",
+      "role": "Agent 编排 / 数据蒸馏 / LLM-as-Judge 评测",
+      "tech": ["Qwen Embedding", "Agent", "LLM-as-Judge", "Prompt Harness", "Data Distillation"],
       "highlights": [
-        "构建高对比、低干扰的 VR 跑酷视觉语言。",
-        "通过空间层级和动态障碍物强化第一人称沉浸感。",
-        "完成核心跑酷循环与基础关卡原型。"
+        "构建 badcase 示例库和规则知识库，实现同标签 case 聚类召回与规则自动匹配。",
+        "搭建 Prompt Harness 与 PE Benchmark，围绕 few-shot 一致性、label/rule 命中等规则自动质检。",
+        "5 次迭代累计产出 20w+ 风险 Push 蒸馏数据。",
+        "高质量样本回流训练后，Push 风控模型正例 R@P80 从 0.424 提升至 0.572（+14.8pp）。"
       ],
-      "link": "https://example.com/chasing"
+      "link": "https://example.com/push-risk-agentic-distillation"
+    },
+    {
+      "id": "fastlite-local-llm-engine",
+      "name": "LLM 高效推理系统",
+      "period": "2025.09",
+      "image": "/assets/project-rag.svg",
+      "imageAlt": "FastLite Local LLM Engine system diagram",
+      "summary": "华为爱尔兰研究所 Tech Arena 2025 黑客松项目，构建本地轻量化 LLM/RAG 推理系统，获得第二名（2/19）。",
+      "details": "项目基于 Qwen-4B 构建轻量级 RAG 系统，并在 16 核 CPU 环境下通过量化、多线程批处理、异步推理和自研 Agent 自动化评估框架提升准确率、降低延迟并验证系统稳定性。",
+      "role": "Team Leader / RAG 架构 / 推理优化 / Agent 评估",
+      "tech": ["Qwen-4B", "RAG", "4-bit Quantization", "Async Inference", "LLM Agent"],
+      "highlights": [
+        "构建基于 Qwen-4B 的轻量级 RAG 系统，在 16 核 CPU 环境下将小型模型准确率提升 30%。",
+        "实施 8-bit/4-bit 模型量化，在保持 60% 精度的情况下将推理延迟降低 40%。",
+        "引入多线程批处理与异步推理架构，提升系统吞吐量。",
+        "自主设计 LLM Agent 自动化评估框架，完成系统稳定性验证。",
+        "作为 Team Leader 带队获得第二名，奖金 20000 元。"
+      ],
+      "link": "https://github.com/ACTOR-ALCHEMIST/FastLite-Local-LLM-Engine"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Github, GraduationCap, MapPin } from "lucide-react";
+import { Github, Globe, Mail, MapPin } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
@@ -11,7 +11,8 @@ const navItems = [
 
 const socialIcons = {
   github: Github,
-  scholar: GraduationCap
+  website: Globe,
+  email: Mail
 };
 
 export default function Sidebar({ profile }) {
@@ -43,7 +44,7 @@ export default function Sidebar({ profile }) {
 
       <div className="sidebar-meta" aria-label="External links and location">
         {profile.socialLinks.map((link) => {
-          const Icon = socialIcons[link.type] ?? GraduationCap;
+          const Icon = socialIcons[link.type] ?? Globe;
           return (
             <a
               key={link.label}

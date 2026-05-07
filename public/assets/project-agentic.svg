@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic data distillation preview</title>
+  <desc id="desc">Agent pipeline for badcase mining, rule matching, generation and quality control.</desc>
+  <rect width="960" height="540" fill="#f7f8fa"/>
+  <rect x="74" y="86" width="812" height="368" rx="30" fill="#fff" stroke="#e4e7eb" stroke-width="2"/>
+  <g fill="#20242a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-weight="800" font-size="24">
+    <text x="142" y="202">Badcase</text>
+    <text x="340" y="202">Rules</text>
+    <text x="526" y="202">Agent</text>
+    <text x="706" y="202">Judge</text>
+  </g>
+  <g fill="#eef3f8" stroke="#dce4ec" stroke-width="2">
+    <rect x="126" y="228" width="126" height="86" rx="16"/>
+    <rect x="326" y="228" width="126" height="86" rx="16"/>
+    <rect x="516" y="228" width="126" height="86" rx="16"/>
+    <rect x="696" y="228" width="126" height="86" rx="16"/>
+  </g>
+  <path d="M266 270h48M466 270h38M656 270h28" stroke="#2f6fdd" stroke-width="8" stroke-linecap="round"/>
+  <path d="M296 250l20 20-20 20M486 250l20 20-20 20M666 250l20 20-20 20" fill="none" stroke="#2f6fdd" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="136" y="390" fill="#20242a" font-size="42" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">20w+ distillation data</text>
+</svg>

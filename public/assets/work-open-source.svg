@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Open source contribution preview</title>
+  <desc id="desc">A minimal open source contribution board with pull requests and widgets.</desc>
+  <rect width="960" height="540" fill="#ffffff"/>
+  <rect x="86" y="76" width="788" height="388" rx="30" fill="#f7f8fa" stroke="#e4e7eb" stroke-width="2"/>
+  <rect x="142" y="134" width="676" height="76" rx="18" fill="#fff" stroke="#dce4ec" stroke-width="2"/>
+  <rect x="142" y="238" width="676" height="76" rx="18" fill="#fff" stroke="#dce4ec" stroke-width="2"/>
+  <rect x="142" y="342" width="676" height="76" rx="18" fill="#fff" stroke="#dce4ec" stroke-width="2"/>
+  <circle cx="190" cy="172" r="16" fill="#2f6fdd"/>
+  <circle cx="190" cy="276" r="16" fill="#2f6fdd"/>
+  <circle cx="190" cy="380" r="16" fill="#2f6fdd"/>
+  <path d="M238 172h300M238 276h380M238 380h260" stroke="#20242a" stroke-width="16" stroke-linecap="round"/>
+  <path d="M670 172h78M670 276h78M670 380h78" stroke="#8a9099" stroke-width="14" stroke-linecap="round"/>
+</svg>
