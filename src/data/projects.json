@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "id": "eyesay",
+      "name": "基于大模型的社交辅助沟通工具",
+      "period": "2023.03 - 2023.09",
+      "image": "/assets/project-eyesay.png",
+      "imageAlt": "EyeSay social communication assistant interface preview",
+      "summary": "EyeSay 是一款专为中风、帕金森及渐冻症等重度失能群体设计的人格化辅助沟通工具。",
+      "details": "该方案利用 Apple 的 ARKit 技术实现低成本眼动追踪交互，有效降低患者的使用门槛。通过集成 GPT-4 大语言模型，系统能够结合话题偏好与社交亲密度两个核心维度，预测并生成个性化回复。",
+      "role": "产品设计 / 交互研究 / 原型开发",
+      "tech": ["GPT-4", "ARKit", "iPadOS", "Accessibility", "Human-AI Interaction"],
+      "highlights": [
+        "设计面向重度失能群体的低门槛眼动交互流程。",
+        "将话题偏好和社交关系作为生成回复的上下文维度。",
+        "完成从用户需求、交互模型到高保真原型的完整验证。"
+      ],
+      "link": "https://example.com/eyesay"
+    },
+    {
+      "id": "eldercare-avatar",
+      "name": "适老化 AI 虚拟人对话产品",
+      "period": "2022.05 - 2023.12",
+      "image": "/assets/project-eldercare.png",
+      "imageAlt": "Elderly AI avatar smart speaker product preview",
+      "summary": "小数是一款智能家居产品，形态是 AI 虚拟人对话音箱，面向老年人的日常咨询与陪伴服务。",
+      "details": "产品将全息投影与 AI 虚拟助手相结合，依赖华数集团线下社区网络资源，通过日常问答帮助老年人获取咨询和服务，并在真实社区场景中持续迭代。",
+      "role": "产品经理 / 体验策略 / 数据结构设计",
+      "tech": ["AI Avatar", "Service Design", "Voice Interaction", "Elderly Care"],
+      "highlights": [
+        "定义“生活助手 + 情感陪伴”的适老化虚拟人产品定位。",
+        "沉淀多维用户画像数据结构，用于后续个性化对话策略。",
+        "推动概念原型、线下社区试点和商业落地之间的衔接。"
+      ],
+      "link": "https://example.com/eldercare"
+    },
+    {
+      "id": "chasing",
+      "name": "《Chasing》基于 Oculus 的跑酷游戏",
+      "period": "2021.11 - 2022.02",
+      "image": "/assets/project-chasing.png",
+      "imageAlt": "Chasing Oculus parkour game visual preview",
+      "summary": "《Chasing》是一款数据朋克风跑酷游戏，玩家以第一人称视角在抽象赛博空间中完成躲避与追逐。",
+      "details": "项目探索 VR 场景中的节奏控制、冷暖色对比和高速视觉反馈，通过空间深度和动态障碍物塑造沉浸式压力感。",
+      "role": "概念设计 / 视觉系统 / Unity 原型",
+      "tech": ["Oculus", "Unity", "VR Interaction", "Game Design"],
+      "highlights": [
+        "构建高对比、低干扰的 VR 跑酷视觉语言。",
+        "通过空间层级和动态障碍物强化第一人称沉浸感。",
+        "完成核心跑酷循环与基础关卡原型。"
+      ],
+      "link": "https://example.com/chasing"
+    }
+  ]
+}

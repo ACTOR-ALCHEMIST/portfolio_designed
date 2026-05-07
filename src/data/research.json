@@ -1,0 +1,40 @@
+{
+  "papers": [
+    {
+      "id": "human-ai-alignment",
+      "title": "Reasoning-Driven Synthetic Interaction for Human-AI Alignment",
+      "subtitle": "面向人机协同的认知对齐与交互策略研究",
+      "authors": ["Zhuyu Teng", "Lingyun Sun"],
+      "venue": "CHI 2026",
+      "period": "2026.03",
+      "image": "/assets/research-human-ai.svg",
+      "imageAlt": "Human AI alignment research diagram",
+      "abstract": "本研究关注人与 AI 交互过程中的认知对齐问题，探索如何利用推理驱动的合成交互数据改善 AI 辅助系统的可解释性、响应一致性与用户信任。",
+      "keywords": ["Human-AI Interaction", "Cognitive Alignment", "Synthetic Data", "Explainability"],
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://example.com/paper"
+        }
+      ]
+    },
+    {
+      "id": "creativity-support",
+      "title": "AI-assisted Creativity Support in Early-stage Design",
+      "subtitle": "AI 辅助设计工具中的创造力支持机制",
+      "authors": ["Zhuyu Teng"],
+      "venue": "Design Research Notes",
+      "period": "2025.10",
+      "image": "/assets/research-creativity.svg",
+      "imageAlt": "Creativity support research workflow diagram",
+      "abstract": "研究梳理 AI 在早期设计过程中的介入方式，重点分析提示、草图、评价与迭代环节如何共同影响设计者的探索空间和决策质量。",
+      "keywords": ["Creativity Support", "AI Design Tools", "UX Research", "Design Process"],
+      "links": [
+        {
+          "label": "Notes",
+          "href": "https://example.com/notes"
+        }
+      ]
+    }
+  ]
+}

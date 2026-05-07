@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Creativity support research preview</title>
+  <desc id="desc">A clean grid of creative tool signals and evaluation cards.</desc>
+  <rect width="960" height="540" fill="#fafafa"/>
+  <rect x="78" y="74" width="804" height="392" rx="30" fill="#fff" stroke="#e4e7eb" stroke-width="2"/>
+  <rect x="140" y="136" width="250" height="118" rx="18" fill="#f2f5f9"/>
+  <rect x="426" y="136" width="250" height="118" rx="18" fill="#f2f5f9"/>
+  <rect x="140" y="292" width="250" height="118" rx="18" fill="#f2f5f9"/>
+  <rect x="426" y="292" width="250" height="118" rx="18" fill="#f2f5f9"/>
+  <path d="M724 144v250" stroke="#2f6fdd" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="724" cy="160" r="20" fill="#2f6fdd"/>
+  <circle cx="724" cy="270" r="20" fill="#2f6fdd"/>
+  <circle cx="724" cy="394" r="20" fill="#2f6fdd"/>
+  <g fill="#20242a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-weight="700" font-size="28">
+    <text x="172" y="204">Prompt</text>
+    <text x="458" y="204">Sketch</text>
+    <text x="172" y="360">Critique</text>
+    <text x="458" y="360">Iterate</text>
+  </g>
+  <g fill="#8a9099" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="22">
+    <text x="146" y="104">AI-assisted design workflow</text>
+    <text x="760" y="276">study</text>
+  </g>
+</svg>

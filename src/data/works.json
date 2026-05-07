@@ -1,0 +1,24 @@
+{
+  "works": [
+    {
+      "id": "design-system-board",
+      "title": "AI 产品设计系统看板",
+      "type": "Design System",
+      "image": "/assets/work-system.svg",
+      "imageAlt": "Design system component board preview",
+      "summary": "整理 AI 产品中常见的按钮、卡片、空状态和对话反馈组件，形成可复用的轻量设计规范。",
+      "tags": ["Design System", "AI Product", "Components"],
+      "link": "https://example.com/design-system"
+    },
+    {
+      "id": "research-notes",
+      "title": "HCI 论文速读笔记",
+      "type": "Writing",
+      "image": "/assets/work-notes.svg",
+      "imageAlt": "Research notes board preview",
+      "summary": "将 CHI / UIST 中与 Human-AI Interaction 相关的论文进行结构化拆解，沉淀为可检索的研究笔记。",
+      "tags": ["HCI", "Research", "Notes"],
+      "link": "https://example.com/research-notes"
+    }
+  ]
+}

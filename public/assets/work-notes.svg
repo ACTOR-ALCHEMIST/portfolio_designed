@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Research notes work preview</title>
+  <desc id="desc">A clean research note board with pinned excerpts and tags.</desc>
+  <rect width="960" height="540" fill="#ffffff"/>
+  <rect x="96" y="76" width="768" height="388" rx="30" fill="#f7f8fa" stroke="#e4e7eb" stroke-width="2"/>
+  <rect x="152" y="132" width="286" height="250" rx="20" fill="#fff" stroke="#e4e7eb" stroke-width="2"/>
+  <rect x="488" y="132" width="286" height="250" rx="20" fill="#fff" stroke="#e4e7eb" stroke-width="2"/>
+  <path d="M190 190h200M190 236h166M190 282h212M526 190h200M526 236h132M526 282h182" stroke="#20242a" stroke-width="14" stroke-linecap="round"/>
+  <path d="M190 332h86M292 332h66M526 332h92M636 332h72" stroke="#2f6fdd" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="438" cy="132" r="15" fill="#2f6fdd"/>
+  <circle cx="774" cy="132" r="15" fill="#2f6fdd"/>
+</svg>

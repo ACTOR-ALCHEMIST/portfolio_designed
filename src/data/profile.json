@@ -1,0 +1,42 @@
+{
+  "name": "Zhuyu Teng",
+  "chineseName": "滕朱瑜",
+  "title": "AI Product Manager / Researcher",
+  "avatar": "/assets/avatar.png",
+  "greeting": "Hey there",
+  "headline": "I'm Zhuyu Teng.",
+  "tagline": "Pragmatic by mind, human by heart. | 数据视角驱动决策，体验视角打磨产品",
+  "introEnglish": "I am an explorer with a background in design and computer science, currently pursuing my Master's degree in Design at the College of Computer Science and Technology, Zhejiang University. My core interests and research focus on cognitive alignment in Human-AI interaction, the application of AI-assisted design tools, and creativity support. I am currently actively seeking internship and full-time opportunities as an AI Product Manager.",
+  "introChinese": "我是一名兼具设计与计算机双重背景的探索者，目前在浙江大学计算机科学与技术学院攻读设计学硕士学位。我的核心兴趣与研究方向聚焦于人与 AI 交互过程中的认知对齐、AI 辅助设计工具的应用，以及创造力支持。致力于在 AI 时代，成为务实的理想主义者。",
+  "socialLinks": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/",
+      "type": "github"
+    },
+    {
+      "label": "Google Scholar",
+      "href": "https://scholar.google.com/",
+      "type": "scholar"
+    }
+  ],
+  "location": "杭州，中国",
+  "skills": [
+    "Human-AI Interaction",
+    "AI Product Strategy",
+    "UX Research",
+    "Design Systems",
+    "Prompt Engineering",
+    "Data-informed Decisions"
+  ],
+  "news": [
+    {
+      "date": "2026.03",
+      "title": "论文接收于 CHI（CCF A）2026 · 巴塞罗那"
+    },
+    {
+      "date": "2025.12",
+      "title": "加入字节跳动-线索广告-AI智能客服业务 商业产品实习生"
+    }
+  ]
+}

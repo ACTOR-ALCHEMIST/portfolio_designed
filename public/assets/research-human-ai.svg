@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Human AI alignment research preview</title>
+  <desc id="desc">A restrained abstract diagram showing human and AI cognition alignment.</desc>
+  <rect width="960" height="540" fill="#f7f8fa"/>
+  <rect x="70" y="70" width="820" height="400" rx="28" fill="#fff" stroke="#e4e7eb" stroke-width="2"/>
+  <circle cx="260" cy="270" r="84" fill="#eef2f7" stroke="#d8dde6" stroke-width="2"/>
+  <circle cx="700" cy="270" r="84" fill="#edf4ff" stroke="#b9cef5" stroke-width="2"/>
+  <path d="M351 270h258" fill="none" stroke="#2f6fdd" stroke-width="10" stroke-linecap="round"/>
+  <path d="M538 226l70 44-70 44" fill="none" stroke="#2f6fdd" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#20242a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-weight="700">
+    <text x="205" y="283" font-size="34">Human</text>
+    <text x="677" y="283" font-size="34">AI</text>
+  </g>
+  <g fill="#8a9099" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="24">
+    <text x="152" y="392">cognition</text>
+    <text x="625" y="392">assistance</text>
+    <text x="375" y="180">interaction alignment</text>
+  </g>
+</svg>
