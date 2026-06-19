@@ -4,6 +4,7 @@
       "id": "douyin-dpo-simv2",
       "name": "多模态表意模型 DPO 训练优化与自动化评测",
       "period": "2025.12 - 2026.02",
+      "cvFeatured": true,
       "image": "/assets/project-dpo.svg",
       "imageAlt": "DPO training optimization and automated evaluation diagram",
       "summary": "面向抖音视频相似召回场景，在成熟 SimV2 表意模型基线上引入偏好数据驱动的 DPO 后训练方案。",
@@ -17,12 +18,33 @@
         "基于 HNSW 优化百万级召回库检索效率，将评测任务平均耗时降低 30%。",
         "软 margin 方案准确率由 78.37% 提升至 85.82%（+7.45pp）。"
       ],
-      "link": "https://example.com/douyin-dpo-simv2"
+      "link": ""
+    },
+    {
+      "id": "douyin-vlm-2t-data-pipeline",
+      "name": "抖音通用 VLM 基模 2T tokens 数据生产",
+      "period": "2026.03 - now",
+      "cvFeatured": true,
+      "image": "/assets/project-vlm.svg",
+      "imageAlt": "VLM training data production pipeline diagram",
+      "summary": "参与抖音通用 VLM 基模训练数据建设，从算法调优、Prompt 工程到大数据批量推理 Pipeline，完成 2T tokens 级数据规模化生产。",
+      "details": "项目覆盖 18 个能力维度的 VLM 训练数据生产，从 Prompt 策略、Generator/Judge/Filter 质检到 Spark 与 Dorado 批量推理全链路搭建，支撑千万级单批交付与日常稳定产能。",
+      "role": "数据生产链路 / Prompt 工程 / 批量推理优化 / 质量评测",
+      "tech": ["VLM", "Prompt Engineering", "Spark", "Dorado", "Hive", "Batch Inference"],
+      "highlights": [
+        "搭建覆盖 18 个能力维度的 VLM 训练数据生产 Pipeline，实现 2T tokens 级训练数据规模化生产，产能提升 10x+。",
+        "单批次交付 2509 万条数据，日均产量 60 万+。",
+        "优化名人识别数据生产算法，从纯视觉识别迭代到 Generator + Judge 与 Filter + QC Benchmark 模式，数据准确度达到 90.7%。",
+        "通过虚拟核、分片策略、PBO 关闭和自适应执行等 Spark 调优，将批量推理任务构建从 12h+ 优化至 1-2h。",
+        "完成 Dorado 批量推理 Pipeline 调试，批量推理效率较在线推理提升 14.7x，推理成本降低 50%。"
+      ],
+      "link": ""
     },
     {
       "id": "qwen3-vl-sft-classification",
       "name": "多模态内容分类模型 SFT",
       "period": "2026.02 - 2026.03",
+      "cvFeatured": true,
       "image": "/assets/project-sft.svg",
       "imageAlt": "Qwen3-VL SFT multimodal classification diagram",
       "summary": "面向懂车帝图文内容审核与标签自动化场景，基于 Qwen3-VL 构建自动分类系统，替代人工标注多模态内容。",
@@ -36,12 +58,13 @@
         "25 个标签平均准确率由纯 Prompt Engineering 的 60% 提升至 95%。",
         "推动机标替代人工审核，预计节省 16 人力，实现 30% 数据免审。"
       ],
-      "link": "https://example.com/qwen3-vl-sft"
+      "link": ""
     },
     {
       "id": "push-risk-agentic-distillation",
       "name": "Push 风控模型 Agentic 数据蒸馏系统",
       "period": "2026.02 - now",
+      "cvFeatured": true,
       "image": "/assets/project-agentic.svg",
       "imageAlt": "Agentic data distillation pipeline diagram",
       "summary": "面向 Push 风控模型线上 badcase 误判问题，构建 Agentic 数据蒸馏与自动质检系统，改善正例稀缺和标签分布不均衡问题。",
@@ -49,17 +72,19 @@
       "role": "Agent 编排 / 数据蒸馏 / LLM-as-Judge 评测",
       "tech": ["Qwen Embedding", "Agent", "LLM-as-Judge", "Prompt Harness", "Data Distillation"],
       "highlights": [
-        "构建 badcase 示例库和规则知识库，实现同标签 case 聚类召回与规则自动匹配。",
-        "搭建 Prompt Harness 与 PE Benchmark，围绕 few-shot 一致性、label/rule 命中等规则自动质检。",
+        "基于 Qwen-4B-Embedding 构建 badcase 示例库与规则知识库，实现同标签 case 聚类召回与 case-rule 自动匹配。",
+        "编排生成 Agent、Rule Matching Agent 与过滤链路，支持批量数据生产、规则匹配和样本筛选。",
+        "搭建 Prompt Harness 与 PE Benchmark，围绕 few-shot 一致性、label/rule 命中等规则自动质检并迭代调优 Agent。",
         "5 次迭代累计产出 20w+ 风险 Push 蒸馏数据。",
         "高质量样本回流训练后，Push 风控模型正例 R@P80 从 0.424 提升至 0.572（+14.8pp）。"
       ],
-      "link": "https://example.com/push-risk-agentic-distillation"
+      "link": ""
     },
     {
       "id": "fastlite-local-llm-engine",
       "name": "LLM 高效推理系统",
       "period": "2025.09",
+      "cvFeatured": false,
       "image": "/assets/project-rag.svg",
       "imageAlt": "FastLite Local LLM Engine system diagram",
       "summary": "华为爱尔兰研究所 Tech Arena 2025 黑客松项目，构建本地轻量化 LLM/RAG 推理系统，获得第二名（2/19）。",

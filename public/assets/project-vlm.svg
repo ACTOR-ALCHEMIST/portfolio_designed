@@ -1,0 +1,31 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F7F8FA"/>
+  <rect x="72" y="72" width="816" height="396" rx="28" fill="#FFFFFF" stroke="#D8DEE8" stroke-width="2"/>
+  <rect x="112" y="118" width="190" height="124" rx="18" fill="#EDF4FF" stroke="#BCD5FF" stroke-width="2"/>
+  <rect x="132" y="142" width="64" height="48" rx="10" fill="#2F6FDD"/>
+  <circle cx="213" cy="166" r="24" fill="#7E9FDB"/>
+  <path d="M132 211L160 184L185 207L203 190L263 222H132V211Z" fill="#85A6E7"/>
+  <text x="134" y="282" fill="#171B21" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="22" font-weight="700">VLM Data</text>
+  <text x="134" y="314" fill="#59616B" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="18" font-weight="600">18 capabilities</text>
+  <rect x="384" y="108" width="192" height="72" rx="16" fill="#FFF7E8" stroke="#F1C77E" stroke-width="2"/>
+  <text x="414" y="153" fill="#171B21" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Prompt</text>
+  <rect x="384" y="224" width="192" height="72" rx="16" fill="#F0FFF4" stroke="#9ED7AF" stroke-width="2"/>
+  <text x="421" y="269" fill="#171B21" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Judge</text>
+  <rect x="384" y="340" width="192" height="72" rx="16" fill="#FFF1F1" stroke="#F1AAAA" stroke-width="2"/>
+  <text x="420" y="385" fill="#171B21" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Filter</text>
+  <rect x="660" y="130" width="168" height="280" rx="22" fill="#171B21"/>
+  <text x="700" y="204" fill="#FFFFFF" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="52" font-weight="800">2T</text>
+  <text x="704" y="242" fill="#D5DAE1" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="20" font-weight="650">tokens</text>
+  <text x="704" y="304" fill="#FFFFFF" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="28" font-weight="750">14.7x</text>
+  <text x="704" y="337" fill="#D5DAE1" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="18" font-weight="650">batch inference</text>
+  <path d="M314 180H360" stroke="#8A9099" stroke-width="5" stroke-linecap="round"/>
+  <path d="M314 260H360" stroke="#8A9099" stroke-width="5" stroke-linecap="round"/>
+  <path d="M314 340H360" stroke="#8A9099" stroke-width="5" stroke-linecap="round"/>
+  <path d="M596 144H636" stroke="#2F6FDD" stroke-width="5" stroke-linecap="round"/>
+  <path d="M596 260H636" stroke="#2F6FDD" stroke-width="5" stroke-linecap="round"/>
+  <path d="M596 376H636" stroke="#2F6FDD" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="634" cy="144" r="7" fill="#2F6FDD"/>
+  <circle cx="634" cy="260" r="7" fill="#2F6FDD"/>
+  <circle cx="634" cy="376" r="7" fill="#2F6FDD"/>
+  <text x="112" y="420" fill="#59616B" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="20" font-weight="650">Hive -> Spark -> Dorado -> QC Benchmark</text>
+</svg>

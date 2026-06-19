@@ -5,9 +5,28 @@
   "avatar": "/assets/avatar.png",
   "greeting": "Hello",
   "headline": "I'm Hu Jiang.",
-  "tagline": "AI engineering, MLOps, LLM systems, and data flywheels.",
-  "introEnglish": "I work on AI infrastructure and MLOps for high-QPS model systems, with hands-on experience across data mining, model training, automated evaluation, inference deployment, and LLM/Agent-driven data distillation. My recent work focuses on multimodal content understanding, preference optimization, synthetic data generation, and production-grade model iteration loops.",
-  "introChinese": "我关注 AI 工程化与模型运维，主要经验覆盖数据挖掘、送标、训练、自动化评测、推理部署和数据飞轮闭环。近期工作聚焦多模态内容理解、DPO 偏好优化、LLM 数据蒸馏、Agentic 数据生产与高 QPS 模型上线体系。",
+  "tagline": "AI engineering, MLOps, multimodal models, and data flywheels.",
+  "introEnglish": "I build production AI systems across model training, automated evaluation, inference deployment, and LLM/Agent-driven data flywheels. Recent work spans multimodal content understanding, DPO preference optimization, VLM data production, synthetic data generation, and high-QPS model iteration loops.",
+  "introChinese": "我专注 AI 工程化与模型运维，经验覆盖数据挖掘、训练调优、自动化评测、推理部署和数据飞轮闭环。近期工作聚焦多模态内容理解、DPO 偏好优化、VLM 训练数据生产、Agentic 数据蒸馏与高 QPS 模型上线体系。",
+  "resumeSummary": "AI / MLOps 工程师，能把模型训练、数据生产、自动评测和推理部署串成可持续迭代的生产链路。近期在多模态召回、内容分类、Push 风控和 VLM 数据生产中落地 DPO、SFT、Agentic 数据蒸馏与批量推理优化。",
+  "resumeMetrics": [
+    {
+      "value": "2T",
+      "label": "VLM 训练 tokens 生产链路"
+    },
+    {
+      "value": "+35pp",
+      "label": "多模态分类准确率提升"
+    },
+    {
+      "value": "20w+",
+      "label": "风险 Push 蒸馏数据"
+    },
+    {
+      "value": "14.7x",
+      "label": "批量推理效率提升"
+    }
+  ],
   "email": "hujiang2001@foxmail.com",
   "phone": "15348452000",
   "website": "https://jasperhu.cc",
@@ -30,10 +49,10 @@
   ],
   "location": "北京 / 朝阳",
   "skills": [
-    "AI: PyTorch, Hugging Face, LangChain, LangGraph, RAG, LLM Fine-Tuning (LoRA), Apache Spark MLlib",
-    "开发: Python, Java, Spring Boot, FastAPI, React/Next.js, PostgreSQL, MySQL",
-    "VibeCoding: Claude Code Skills, Codex, Skills 编写",
-    "运维: Git, Docker, CI/CD, GitHub Actions, GCP Cloud Run, Merlin, HDFS"
+    "AI / LLM: PyTorch, Hugging Face, Qwen-VL, DPO, SFT, RAG, LangChain, LangGraph, LLM-as-Judge",
+    "MLOps / Data: 自动化评测, 推理部署, 数据飞轮, Apache Spark, HDFS, Dorado, Merlin, vLLM",
+    "Engineering: Python, Java, Spring Boot, FastAPI, React/Next.js, PostgreSQL, MySQL, Docker",
+    "Developer AI: Claude Code Skills, Codex, Agent Workflow, Prompt Engineering"
   ],
   "awards": [
     {

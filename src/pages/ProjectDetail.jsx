@@ -51,10 +51,12 @@ export default function ProjectDetail() {
           </span>
         ))}
       </div>
-      <a className="external-cta" href={project.link} target="_blank" rel="noreferrer">
-        View reference
-        <ExternalLink aria-hidden="true" size={18} />
-      </a>
+      {project.link ? (
+        <a className="external-cta" href={project.link} target="_blank" rel="noreferrer">
+          View reference
+          <ExternalLink aria-hidden="true" size={18} />
+        </a>
+      ) : null}
     </article>
   );
 }
