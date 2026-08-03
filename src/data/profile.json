@@ -11,20 +11,20 @@
   "resumeSummary": "AI / MLOps 工程师，能把模型训练、数据生产、自动评测和推理部署串成可持续迭代的生产链路。近期在多模态召回、内容分类、Push 风控和 VLM 数据生产中落地 DPO、SFT、Agentic 数据蒸馏与批量推理优化。",
   "resumeMetrics": [
     {
-      "value": "2T",
-      "label": "VLM 训练 tokens 生产链路"
+      "value": "12万",
+      "label": "分类模型训练样本"
     },
     {
-      "value": "+35pp",
-      "label": "多模态分类准确率提升"
+      "value": "+18pp",
+      "label": "Qwen 分类 AIO 提升"
     },
     {
-      "value": "20w+",
+      "value": "3万+",
       "label": "风险 Push 蒸馏数据"
     },
     {
-      "value": "14.7x",
-      "label": "批量推理效率提升"
+      "value": "+4.8pp",
+      "label": "Push 正例 R@P80 提升"
     }
   ],
   "email": "hujiang2001@foxmail.com",

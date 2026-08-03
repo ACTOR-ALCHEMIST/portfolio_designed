@@ -5,8 +5,7 @@ const navItems = [
   { label: "Home", to: "/", end: true },
   { label: "CV", to: "/cv" },
   { label: "Research", to: "/research" },
-  { label: "Project", to: "/projects" },
-  { label: "Blog", to: "/blog" }
+  { label: "Project", to: "/projects" }
 ];
 
 const socialIcons = {

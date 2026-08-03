@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { getFeaturedProjects, getRecentPosts, profile } from "../lib/content";
+import { getFeaturedProjects, profile } from "../lib/content";
 
 export default function Home() {
   const featuredProjects = getFeaturedProjects(2);
-  const recentPosts = getRecentPosts(2);
 
   return (
     <div className="page-stack home-page">
@@ -30,34 +29,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-split" aria-label="Featured summaries">
-        <div>
-          <div className="section-kicker">
-            <h2>Selected Projects</h2>
-            <Link to="/projects">View all</Link>
+      <section className="home-projects" aria-labelledby="selected-projects-title">
+        <div className="section-kicker">
+          <div>
+            <p className="eyebrow">Case studies</p>
+            <h2 id="selected-projects-title">Selected Projects</h2>
           </div>
-          <div className="compact-list">
-            {featuredProjects.map((project) => (
-              <Link to={`/projects/${project.id}`} key={project.id}>
-                <span>{project.name}</span>
-                <time>{project.period}</time>
-              </Link>
-            ))}
-          </div>
+          <Link to="/projects">View all</Link>
         </div>
-        <div>
-          <div className="section-kicker">
-            <h2>Recent Notes</h2>
-            <Link to="/blog">Read blog</Link>
-          </div>
-          <div className="compact-list">
-            {recentPosts.map((post) => (
-              <a href={post.link} key={post.id} target="_blank" rel="noreferrer">
-                <span>{post.title}</span>
-                <time>{post.date}</time>
-              </a>
-            ))}
-          </div>
+        <div className="home-project-list">
+          {featuredProjects.map((project, index) => (
+            <Link to={`/projects/${project.id}`} key={project.id}>
+              <span className="home-project-index">0{index + 1}</span>
+              <span className="home-project-copy">
+                <strong>{project.name}</strong>
+                <small>{project.summary}</small>
+              </span>
+              <time>{project.period}</time>
+            </Link>
+          ))}
         </div>
       </section>
     </div>

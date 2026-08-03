@@ -4,10 +4,12 @@ import { projects } from "../lib/content";
 export default function Projects() {
   return (
     <div className="page-stack">
-      <header className="page-header">
-        <h1>项目经历</h1>
+      <header className="page-header projects-header">
+        <p className="eyebrow">Selected work · 2026</p>
+        <h1>从模型到数据飞轮</h1>
         <p>
-          以下项目聚焦多模态内容理解、DPO 偏好优化、Agentic 数据蒸馏、LLM 高效推理和模型工程化落地。
+          两个生产级 AI case study：一个把生成模型收敛成稳定的单 Token 分类器，
+          一个把稀缺 badcase 扩展为可训练、可质检的数据闭环。
         </p>
       </header>
 

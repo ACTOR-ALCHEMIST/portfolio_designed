@@ -4,10 +4,12 @@ import { papers } from "../lib/content";
 export default function Research() {
   return (
     <div className="page-stack">
-      <header className="page-header">
-        <h1>科研经历</h1>
+      <header className="page-header research-page-header">
+        <p className="eyebrow">Selected publication · 2025</p>
+        <h1>让机器文本检测经得起分布变化</h1>
         <p>
-          研究与实验方向围绕 AI 文本检测、低资源部署、RAG 推理优化、自动化评估和训练框架工程化。
+          一项围绕中文电商评论、受控数据合成与分层对比学习的完整研究，
+          从 26K 数据基准一路验证到最具挑战的跨模型、跨风格、跨领域场景。
         </p>
       </header>
 

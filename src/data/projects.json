@@ -1,104 +1,90 @@
 {
   "projects": [
     {
-      "id": "douyin-dpo-simv2",
-      "name": "多模态表意模型 DPO 训练优化与自动化评测",
-      "period": "2025.12 - 2026.02",
+      "id": "qwen3-8b-vocabulary-classifier",
+      "name": "Qwen3-8B 改词表内容分类微调",
+      "category": "MODEL FINE-TUNING",
+      "period": "2026.02 — 2026.03",
       "cvFeatured": true,
-      "image": "/assets/project-dpo.svg",
-      "imageAlt": "DPO training optimization and automated evaluation diagram",
-      "summary": "面向抖音视频相似召回场景，在成熟 SimV2 表意模型基线上引入偏好数据驱动的 DPO 后训练方案。",
-      "details": "SimV2 已基于百万级相似监督数据完成主训练，指标进入平台期；边界样本存在硬标签噪声，模型难以学习细粒度相似关系。项目通过 Triplet 偏好标注、软/硬 margin 约束和自动化评测流水线，提升模型对模糊边界 case 的判别能力。",
-      "role": "模型训练优化 / 数据挖掘送标 / 自动化评测",
-      "tech": ["DPO", "Triplet Preference", "HNSW", "Multimodal Retrieval", "MLOps"],
-      "highlights": [
-        "构建 Triplet 偏好标注体系，定向挖掘并送标 10w+ 三元组视频数据。",
-        "通过软/硬 margin 建模 query-candidate 相对相似性，并对“不确定”样本增加 cosine 差值趋近 0 约束。",
-        "搭建自动化评测流水线，支持 28 个类别、50w+ 测试样本批量评测。",
-        "基于 HNSW 优化百万级召回库检索效率，将评测任务平均耗时降低 30%。",
-        "软 margin 方案准确率由 78.37% 提升至 85.82%（+7.45pp）。"
+      "image": "/assets/qwen-data-landscape.png",
+      "imageAlt": "汽车内容分类项目的数据样例拼图",
+      "imagePosition": "50% 18%",
+      "imageCaption": "真实业务输入覆盖标题、正文、ASR 与作者侧信息，模型最终输出唯一内容标签。",
+      "summary": "为汽车图文内容构建单 Token 生成式分类模型，以 Qwen3-8B 替代高成本、低时效的人工标签流程。",
+      "details": "项目面向 25 类汽车内容标签，将每个完整标签注册为词表中的单一 Token，再把生成空间约束为这组标签 Token，并将最大输出长度固定为 1。相比传统分类头，这套方案保留了生成模型的训练范式，同时让线上输出稳定、可解释、易扩展。",
+      "challenge": "业务文本短、信息密度不均，标签层级深且边界相近。纯 Prompt 方案容易输出额外文本，也难以稳定区分二手车、选买、用车和行业资讯等细粒度类别。",
+      "approach": "统一拼接标题、正文、ASR、作者和活动字段，基于 LLaMA-Factory 完成三阶段 SFT；训练时扩展 Qwen3-8B 词表，推理时只允许生成 25 个标签 Token，并使用 2 万条质检二确数据做后续校准。",
+      "role": "模型微调 / 分类方案设计 / 数据构建 / 推理部署",
+      "tech": ["Qwen3-8B", "SFT", "LLaMA-Factory", "Vocabulary Extension", "Merlin"],
+      "metrics": [
+        { "value": "12万", "label": "训练样本" },
+        { "value": "25", "label": "细粒度标签" },
+        { "value": "83%", "label": "最新 AIO" },
+        { "value": "+18pp", "label": "AIO 提升" }
       ],
-      "link": ""
+      "highlights": [
+        "以完整中文标签作为新增 Token，让分类任务只生成一个确定标签。",
+        "构建 10 万基础数据与 2 万质检二确数据，完成三阶段迭代训练。",
+        "统一 title、content、ASR 与作者侧字段，保证训练和线上推理输入一致。",
+        "最新版本 AIO 从 65% 提升至 83%，提升 18 个百分点。",
+        "25 个标签中 5 类达到 95%+，9 类达到 90%+ 准确率。"
+      ],
+      "process": [
+        { "title": "输入标准化", "description": "清洗并按固定顺序组织标题、正文、ASR、作者与活动字段。" },
+        { "title": "标签 Token 化", "description": "将 25 个层级标签加入词表，初始化新增 embedding。" },
+        { "title": "三阶段 SFT", "description": "从基础数据训练到增量数据更新，再以质检二确数据校准边界。" },
+        { "title": "约束式推理", "description": "只开放标签 Token，关闭采样并限制 max_new_tokens = 1。" }
+      ],
+      "media": [
+        {
+          "src": "/assets/qwen-llamafactory.webp",
+          "alt": "LLaMA-Factory 微调框架标识",
+          "caption": "训练框架 · LLaMA-Factory"
+        },
+        {
+          "src": "/assets/qwen-merlin.png",
+          "alt": "Merlin 训练与部署平台标识",
+          "caption": "训练与部署平台 · Merlin"
+        }
+      ]
     },
     {
-      "id": "douyin-vlm-2t-data-pipeline",
-      "name": "抖音通用 VLM 基模 2T tokens 数据生产",
-      "period": "2026.03 - now",
+      "id": "push-risk-data-distillation",
+      "name": "Push 风控数据合成与质检系统",
+      "category": "DATA DISTILLATION",
+      "period": "2026.02 — Present",
       "cvFeatured": true,
-      "image": "/assets/project-vlm.svg",
-      "imageAlt": "VLM training data production pipeline diagram",
-      "summary": "参与抖音通用 VLM 基模训练数据建设，从算法调优、Prompt 工程到大数据批量推理 Pipeline，完成 2T tokens 级数据规模化生产。",
-      "details": "项目覆盖 18 个能力维度的 VLM 训练数据生产，从 Prompt 策略、Generator/Judge/Filter 质检到 Spark 与 Dorado 批量推理全链路搭建，支撑千万级单批交付与日常稳定产能。",
-      "role": "数据生产链路 / Prompt 工程 / 批量推理优化 / 质量评测",
-      "tech": ["VLM", "Prompt Engineering", "Spark", "Dorado", "Hive", "Batch Inference"],
-      "highlights": [
-        "搭建覆盖 18 个能力维度的 VLM 训练数据生产 Pipeline，实现 2T tokens 级训练数据规模化生产，产能提升 10x+。",
-        "单批次交付 2509 万条数据，日均产量 60 万+。",
-        "优化名人识别数据生产算法，从纯视觉识别迭代到 Generator + Judge 与 Filter + QC Benchmark 模式，数据准确度达到 90.7%。",
-        "通过虚拟核、分片策略、PBO 关闭和自适应执行等 Spark 调优，将批量推理任务构建从 12h+ 优化至 1-2h。",
-        "完成 Dorado 批量推理 Pipeline 调试，批量推理效率较在线推理提升 14.7x，推理成本降低 50%。"
+      "image": "/assets/push-data-architecture.jpg",
+      "imageAlt": "Push 风控数据合成、规则匹配与质检链路架构图",
+      "imagePosition": "50% 32%",
+      "imageTreatment": "architecture",
+      "imageCaption": "从 badcase 与审核规则构建动态 PE，生成结果通过独立质检节点后进入训练集。",
+      "summary": "针对风险 Push 正样本稀缺与分布失衡，构建 few-shot 检索、规则匹配、数据生成和独立质检的一体化流水线。",
+      "details": "项目从少量线上 badcase 与人审规则出发，使用 Embedding 对同标签样本聚类，为每组样本检索匹配规则，再动态组装 Prompt 驱动大模型批量生成。生成结果经过 few-shot 风格、标签、规则与标题正文一致性四层质检，仅保留可用于训练的样本。",
+      "challenge": "原始正例数量少、分布极不均衡；仅根据规则自由生成会偏离真实 Push 的短、碎、平台化表达，直接回流训练反而可能拉低准确率。",
+      "approach": "以 4–10 个相似 badcase 为一组构建 few-shot，使用 Qwen Embedding 完成样本聚类和 rule Top-K 匹配；生成后由独立质检节点输出质量等级与原因，形成可控、可追溯的数据闭环。",
+      "role": "数据蒸馏 / 检索匹配 / Prompt 设计 / LLM 质检",
+      "tech": ["Qwen Embedding", "Few-shot Retrieval", "LLM-as-Judge", "Prompt Engineering", "Data Quality"],
+      "metrics": [
+        { "value": "30,408", "label": "合成训练样本" },
+        { "value": "5轮", "label": "数据迭代" },
+        { "value": "+4.8pp", "label": "R@P80 提升" },
+        { "value": "4层", "label": "质量校验" }
       ],
-      "link": ""
-    },
-    {
-      "id": "qwen3-vl-sft-classification",
-      "name": "多模态内容分类模型 SFT",
-      "period": "2026.02 - 2026.03",
-      "cvFeatured": true,
-      "image": "/assets/project-sft.svg",
-      "imageAlt": "Qwen3-VL SFT multimodal classification diagram",
-      "summary": "面向懂车帝图文内容审核与标签自动化场景，基于 Qwen3-VL 构建自动分类系统，替代人工标注多模态内容。",
-      "details": "项目设计标签 Token 化的生成式分类框架，通过 special token 表达标签，并修改 allowed_token_ids 支持大量 label 的高精度分类；基于 LlamaFactory 完成 SFT 微调，并使用 vLLM 与动态潮汐资源完成上线部署。",
-      "role": "多模态模型微调 / 分类框架设计 / 推理部署",
-      "tech": ["Qwen3-VL", "SFT", "LlamaFactory", "vLLM", "A100", "A30"],
       "highlights": [
-        "挖掘 10w+ 图文训练集，完成多模态训练数据构建。",
-        "设计 special token = 标签的生成式分类方案，支持大量 label 扩展。",
-        "基于 vLLM + A100/A30 动态潮汐资源完成上线部署，支撑 25+ QPS。",
-        "25 个标签平均准确率由纯 Prompt Engineering 的 60% 提升至 95%。",
-        "推动机标替代人工审核，预计节省 16 人力，实现 30% 数据免审。"
+        "基于同标签 badcase 做 Embedding 聚类，每组保留 4–10 个相似 few-shot。",
+        "由 LLM 总结类别特征，再与规则库做向量检索，自动完成 case-rule 匹配。",
+        "用动态变量控制单次生成量，并保持标签比例与真实 badcase 分布接近。",
+        "引入 few-shot、label、rule、title-text 四维独立质检，仅回流有效样本。",
+        "五轮迭代产出 30,408 条数据，正例 R@P80 从 0.424 提升到 0.472。"
       ],
-      "link": ""
-    },
-    {
-      "id": "push-risk-agentic-distillation",
-      "name": "Push 风控模型 Agentic 数据蒸馏系统",
-      "period": "2026.02 - now",
-      "cvFeatured": true,
-      "image": "/assets/project-agentic.svg",
-      "imageAlt": "Agentic data distillation pipeline diagram",
-      "summary": "面向 Push 风控模型线上 badcase 误判问题，构建 Agentic 数据蒸馏与自动质检系统，改善正例稀缺和标签分布不均衡问题。",
-      "details": "项目基于 Qwen-4B-Embedding 构建 badcase 示例库与规则知识库，完成同标签 case 聚类召回与 case-rule 自动匹配，并编排生成 Agent、Rule Matching Agent 和质检链路，支持批量数据生产与过滤。",
-      "role": "Agent 编排 / 数据蒸馏 / LLM-as-Judge 评测",
-      "tech": ["Qwen Embedding", "Agent", "LLM-as-Judge", "Prompt Harness", "Data Distillation"],
-      "highlights": [
-        "基于 Qwen-4B-Embedding 构建 badcase 示例库与规则知识库，实现同标签 case 聚类召回与 case-rule 自动匹配。",
-        "编排生成 Agent、Rule Matching Agent 与过滤链路，支持批量数据生产、规则匹配和样本筛选。",
-        "搭建 Prompt Harness 与 PE Benchmark，围绕 few-shot 一致性、label/rule 命中等规则自动质检并迭代调优 Agent。",
-        "5 次迭代累计产出 20w+ 风险 Push 蒸馏数据。",
-        "高质量样本回流训练后，Push 风控模型正例 R@P80 从 0.424 提升至 0.572（+14.8pp）。"
+      "process": [
+        { "title": "种子整理", "description": "汇总风险 badcase 与审核规则，补齐稀缺类别的平衡种子。" },
+        { "title": "相似样本聚类", "description": "通过 Embedding 召回同标签近邻，形成稳定的 few-shot 风格锚点。" },
+        { "title": "规则自动匹配", "description": "总结样本组特征，与规则向量做 Top-K 检索并生成动态 PE。" },
+        { "title": "生成与质检", "description": "批量生成 JSON 样本，逐条校验风格、标签、规则和文本协同性。" }
       ],
-      "link": ""
-    },
-    {
-      "id": "fastlite-local-llm-engine",
-      "name": "LLM 高效推理系统",
-      "period": "2025.09",
-      "cvFeatured": false,
-      "image": "/assets/project-rag.svg",
-      "imageAlt": "FastLite Local LLM Engine system diagram",
-      "summary": "华为爱尔兰研究所 Tech Arena 2025 黑客松项目，构建本地轻量化 LLM/RAG 推理系统，获得第二名（2/19）。",
-      "details": "项目基于 Qwen-4B 构建轻量级 RAG 系统，并在 16 核 CPU 环境下通过量化、多线程批处理、异步推理和自研 Agent 自动化评估框架提升准确率、降低延迟并验证系统稳定性。",
-      "role": "Team Leader / RAG 架构 / 推理优化 / Agent 评估",
-      "tech": ["Qwen-4B", "RAG", "4-bit Quantization", "Async Inference", "LLM Agent"],
-      "highlights": [
-        "构建基于 Qwen-4B 的轻量级 RAG 系统，在 16 核 CPU 环境下将小型模型准确率提升 30%。",
-        "实施 8-bit/4-bit 模型量化，在保持 60% 精度的情况下将推理延迟降低 40%。",
-        "引入多线程批处理与异步推理架构，提升系统吞吐量。",
-        "自主设计 LLM Agent 自动化评估框架，完成系统稳定性验证。",
-        "作为 Team Leader 带队获得第二名，奖金 20000 元。"
-      ],
-      "link": "https://github.com/ACTOR-ALCHEMIST/FastLite-Local-LLM-Engine"
+      "media": []
     }
   ]
 }

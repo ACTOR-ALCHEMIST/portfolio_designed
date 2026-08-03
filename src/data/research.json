@@ -1,38 +1,63 @@
 {
   "papers": [
     {
-      "id": "ai-text-detection-mlops",
-      "title": "AI 文本检测与 MLOps",
-      "subtitle": "LREC 2026 论文项目 · University of Galway",
+      "id": "human-or-machine-chinese-review-detection",
+      "title": "Human or Machine? Contrastive Learning for Detecting AI-Generated Chinese E-Commerce Reviews with a Custom Dataset",
+      "subtitle": "面向中文电商评论的 AI 生成文本检测、跨域鲁棒性与分层对比学习",
       "authors": ["Hu Jiang"],
-      "venue": "LREC 2026 Project",
-      "period": "2024.12 - 2025.11",
-      "image": "/assets/research-human-ai.svg",
-      "imageAlt": "AI text detection and MLOps research diagram",
-      "abstract": "构建自动化数据处理流水线，利用 LLM API 合成 26K 高质量样本，并存入 PostgreSQL 进行版本管理；开发可扩展 AI 训练框架，集成对比学习与 EvoLORA 算法，实现自动化超参调优。",
-      "keywords": ["AI Text Detection", "MLOps", "PyTorch", "Contrastive Learning", "EvoLORA", "GCP"],
-      "links": [
+      "affiliation": "University of Galway",
+      "venue": "Research Paper",
+      "period": "2025",
+      "pages": 10,
+      "image": "/assets/research-paper-cover.png",
+      "imageAlt": "Human or Machine 论文首页",
+      "abstract": "针对中文电商评论中的 AI 生成内容检测，构建包含 13K 人类评论与 13K 受控合成评论的 26K 平衡基准，设计生成模型、改写风格和商品领域逐级变化的三类 OOD 测试集，并提出基于 bert-base-chinese 的分层多级对比学习框架。模型在域内取得 92.35 F1，在最强 OOD-3 场景下保持 50.72 F1，优于微调 LLM、编码器基线与零样本检测器。",
+      "abstractOriginal": "AI-generated content on Chinese e-commerce platforms undermines consumer trust and market fairness. Existing detectors trained on English corpora rarely generalize to the dense, slang-rich syntax of Chinese reviews or to cross-domain shifts. We introduce a high-fidelity benchmark for this setting, pairing 13K human reviews with controlled synthetic counterparts. A hierarchical contrastive learning framework tailored to Chinese morpho-syntactic cues reaches 92.35 F1 in-domain and 50.72 under the most extreme shift.",
+      "keywords": [
+        "AI-generated Text Detection",
+        "Chinese E-commerce",
+        "Cross-domain Robustness",
+        "Contrastive Learning",
+        "Large Language Models"
+      ],
+      "metrics": [
+        { "value": "26K", "label": "平衡评测数据" },
+        { "value": "92.35", "label": "域内 F1" },
+        { "value": "50.72", "label": "OOD-3 F1" },
+        { "value": "3", "label": "渐进式 OOD 场景" }
+      ],
+      "problem": "英文语料上训练的检测器难以适应中文电商评论中密集、口语化、夹杂表情与品牌转写的表达；当生成模型、改写风格或商品领域变化时，依赖表面特征的模型会快速失效。",
+      "method": "以 ASAP 人类评论为基础，保留方面-情感结构并使用双 Prompt 策略合成对应机器评论；在 bert-base-chinese 编码上同时学习人类/机器、模型组织和具体生成模型三个层级的相似性，并与二分类交叉熵联合训练。",
+      "results": "多级对比模型在域内、OOD-1、OOD-2 和 OOD-3 上分别达到 92.35、87.29、66.77 和 50.72 F1。OOD-3 下优于 Llama-3-8B 的 40.57 F1，也显著高于零样本 Binoculars 的 0.79 F1。",
+      "limitations": "基准仍受当前评论领域、生成模型和攻击方式覆盖范围限制。随着平台黑话、模型家族与改写策略变化，检测性能会衰减，需要持续更新语料，并结合可解释判定与内容溯源机制。",
+      "contributions": [
         {
-          "label": "OpenReview",
-          "href": "https://openreview.net/forum?id=pnz8LRGgXT"
+          "title": "Controlled benchmark",
+          "description": "构建 13K 人类与 13K 机器评论配对的中文电商检测基准。"
+        },
+        {
+          "title": "Progressive OOD",
+          "description": "以模型、风格和领域三种变化逐级检验检测器的真实泛化能力。"
+        },
+        {
+          "title": "Hierarchical contrast",
+          "description": "用模型、组织与人类文本的层级关系学习更稳定的中文写作特征。"
         }
-      ]
-    },
-    {
-      "id": "rag-local-llm-evaluation",
-      "title": "FastLite Local LLM Engine",
-      "subtitle": "轻量化 RAG、量化推理与 Agent 自动化评估",
-      "authors": ["Hu Jiang", "Tech Arena 2025 Team"],
-      "venue": "Huawei Ireland Research Institute Tech Arena 2025",
-      "period": "2025.09",
-      "image": "/assets/project-rag.svg",
-      "imageAlt": "Local LLM engine research and evaluation preview",
-      "abstract": "在无官方工具支持下，自主设计 LLM Agent 自动化评估框架，结合本地轻量化 RAG、8-bit/4-bit 量化、多线程批处理与异步推理，验证低资源环境下的高效推理系统。",
-      "keywords": ["RAG", "Quantization", "LLM Agent", "Evaluation", "CPU Inference"],
-      "links": [
+      ],
+      "visuals": [
         {
-          "label": "GitHub",
-          "href": "https://github.com/ACTOR-ALCHEMIST/FastLite-Local-LLM-Engine"
+          "src": "/assets/research-paper-data.png",
+          "alt": "论文中的受控数据生成流程图",
+          "label": "Figure 01 · Dataset",
+          "caption": "从 ASAP 人类评论提取方面与情感结构，经多风格 Prompt 和多模型生成得到配对数据。",
+          "crop": "data"
+        },
+        {
+          "src": "/assets/research-paper-results.png",
+          "alt": "论文中的模型性能对比表",
+          "label": "Table 06 · Results",
+          "caption": "多级对比模型在四个评测场景中保持最优 F1，并在极端跨域条件下表现出更缓慢的性能退化。",
+          "crop": "results"
         }
       ]
     }
