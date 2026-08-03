@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "eyebrow": "Curriculum Vitae · 2026",
+    "title": "LLM Data Engineer · MLOps",
+    "summary": "聚焦多模态模型、LLM 数据工程与生产级 MLOps。负责从数据策略、训练调优到自动评测和推理部署的完整链路，以可量化的模型收益和工程效率驱动业务落地。",
+    "focus": ["Multimodal LLM", "Data Flywheel", "Model Training", "Evaluation", "Inference"]
+  },
+  "metrics": [
+    { "value": "2.3T", "label": "VLM 训练 Tokens" },
+    { "value": "209.1M", "label": "训练样本交付" },
+    { "value": "14.7×", "label": "推理吞吐提升" },
+    { "value": "+14.8pp", "label": "正例召回提升" }
+  ],
+  "experience": {
+    "company": "字节跳动",
+    "englishCompany": "ByteDance",
+    "role": "LLM Data Engineer · MLOps",
+    "location": "北京",
+    "period": "2025.12 — 至今",
+    "summary": "负责业务 LLM、多模态模型与数据飞轮建设，覆盖训练、评测、推理部署和数据规模化生产。",
+    "highlights": [
+      "搭建数据挖掘、训练、自动评测与回流闭环，以 Agent 和 LLM 提升数据生产效率。",
+      "负责 SFT、DPO 与表征模型训练优化，提升复杂边界场景的准召和泛化能力。",
+      "主导抖音通用 VLM 数据生产体系建设，累计交付 2.3T Tokens、209.1M 条训练样本。",
+      "建设高吞吐推理链路与自动评测基础设施，支撑模型快速迭代和高 QPS 上线。"
+    ],
+    "tech": ["MLOps", "VLM", "SFT / DPO", "LLM-as-a-Judge", "Agentic Workflow", "Batch Inference"]
+  },
+  "projects": [
+    {
+      "title": "抖音 VLM （UniVL）基座数据生产体系",
+      "role": "数据生产算法负责人",
+      "period": "2026.04 — 2026.08",
+      "highlights": [
+        "从 0 到 1 建设多模态基座数据生产体系，设计 46 项能力矩阵并沉淀 28+ 套可复用 Workflow。",
+        "建立质量与难度双门槛，使最新 34 项能力质检均值达到 86.3%，低于 80% 的能力由 7 项降至 1 项。",
+        "交付 2.3T Tokens、209.1M 条训练数据；将离线吞吐提升至在线 API 的 14.7 倍，推理成本降低 50%。",
+        "支撑 DouyinVL CPT 与后训练，阶段模型在整体 / 抖音通用 Benchmark 上分别提升 10.98pp / 7.95pp。"
+      ]
+    },
+    {
+      "title": "多模态内容分类模型 SFT",
+      "role": "Qwen3-VL-8B 微调与分类词表改造",
+      "period": "2026.02 — 2026.03",
+      "highlights": [
+        "构建标签 Token 化的生成式分类框架，以 Special Token 编码 25 个标签并约束解码空间。",
+        "挖掘 30 万+ 图文样本完成 SFT，使用 vLLM 部署至 L20 / A30 潮汐资源，单卡吞吐稳定达到 25+ QPS。",
+        "将平均准确率由 Prompt-only 的 60% 提升至 95%（+35pp），并支持新增标签快速接入。"
+      ]
+    },
+    {
+      "title": "多模态表意模型 DPO 训练优化",
+      "role": "抖音内容理解 · 自动化评测",
+      "period": "2025.12 — 2026.02",
+      "highlights": [
+        "设计 Triplet 偏好标注体系，构建 10 万+ 视频三元组并完成 32 卡 Ascend 910B 分布式训练适配。",
+        "以软 / 硬 margin 建模相对相似性，增强模型对模糊边界样本的判别能力。",
+        "建设覆盖 28 类、50 万+ 样本的评测流水线，将准确率由 78.37% 提升至 85.82%（+7.45pp）。"
+      ]
+    },
+    {
+      "title": "Push 风控模型 Agentic 数据蒸馏系统",
+      "role": "抖音内容理解 · 数据飞轮",
+      "period": "2026.02 — 至今",
+      "highlights": [
+        "针对正例稀缺与分布失衡，构建 bad case 示例库和规则知识库，实现聚类召回与 case-rule 自动匹配。",
+        "编排生成与 Rule Matching Agent，建设 Prompt Harness 和 LLM-as-a-Judge 质检链路，完成 5 轮迭代。",
+        "累计产出 30 万+ 风险 Push 数据；回流训练后 Recall@Precision=80% 从 42.4% 提升至 57.2%（+14.8pp）。"
+      ]
+    },
+    {
+      "title": "LLM 高效推理系统",
+      "role": "华为爱尔兰研究所 Tech Arena 2025",
+      "period": "2025.09",
+      "highlights": [
+        "构建 Qwen-4B RAG 与 LLM-as-a-Judge 评测闭环，将 500 条测试问题准确率从约 50% 提升至 80%+。",
+        "结合量化、并行批处理与异步推理，将单卡任务耗时从约 45 分钟缩短至 15 分钟，吞吐提升 3 倍。",
+        "设计自适应 Batch Size 和生成长度策略，带领团队获得 19 支决赛队伍第 2 名及 ¥20K 奖金。"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "爱尔兰高威大学",
+      "englishSchool": "University of Galway",
+      "degree": "计算机科学（人工智能）理学硕士",
+      "period": "2025.11",
+      "summary": "一等学位 · 约 GPA 3.9",
+      "details": "NLP、LLM、RAG、对比学习、多模态、强化学习"
+    },
+    {
+      "school": "湖南涉外经济学院",
+      "englishSchool": "Hunan International Economics University",
+      "degree": "计算机科学与技术工学学士",
+      "period": "2024.06",
+      "summary": "省级优秀毕业生 · 均分 86.7",
+      "details": "Python、Java、数据库、数据结构与算法、计算机网络"
+    }
+  ],
+  "skills": [
+    { "group": "AI", "items": "PyTorch、Hugging Face、LangChain、LangGraph、RAG、LoRA、Spark MLlib" },
+    { "group": "开发", "items": "Python、Java、Spring Boot、FastAPI、React / Next.js、PostgreSQL、MySQL" },
+    { "group": "AI Coding", "items": "Claude Code、Codex Plus、Skills 编写" },
+    { "group": "工程与运维", "items": "Git、Docker、CI/CD、GitHub Actions、GCP Cloud Run" },
+    { "group": "字节云", "items": "FaaS、TCE、Merlin、Dorado、HDFS、方舟批量推理、方舟 SFT" },
+    { "group": "语言", "items": "英语无障碍沟通" }
+  ],
+  "awards": [
+    { "title": "湖南省普通高等学校创新创业优秀毕业生", "detail": "前 0.1%", "date": "2024.06" },
+    { "title": "爱尔兰国立高威大学优秀奖学金", "detail": "Merit Scholarship", "date": "2024.09" }
+  ],
+  "openSource": [
+    {
+      "title": "NextChat",
+      "meta": "84k+ Stars · Contributor",
+      "summary": "重构多模态流式响应，接入思维链模型，并实现 API 请求内容自动适配。",
+      "link": "https://github.com/ChatGPTNextWeb/NextChat/pull/6457"
+    },
+    {
+      "title": "LeetCode Glance",
+      "meta": "Independent · macOS Widget",
+      "summary": "独立开发 LeetCode 状态组件，收录于 Übersicht 官方插件库。",
+      "link": "https://tracesof.net/uebersicht-widgets/#leetcode-glance"
+    }
+  ]
+}
