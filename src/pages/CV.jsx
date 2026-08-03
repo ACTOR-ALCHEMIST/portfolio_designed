@@ -17,14 +17,6 @@ export default function CV() {
           </div>
         </div>
 
-        <div className="resume-metric-rail" aria-label="Resume highlights">
-          {cv.metrics.map((metric) => (
-            <article key={metric.label}>
-              <strong>{metric.value}</strong>
-              <span>{metric.label}</span>
-            </article>
-          ))}
-        </div>
       </header>
 
       <section className="resume-section" aria-labelledby="experience-title">

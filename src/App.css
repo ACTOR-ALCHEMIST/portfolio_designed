@@ -15,10 +15,8 @@
 }
 
 .resume-hero {
-  display: grid;
-  gap: 28px;
   border-bottom: 1px solid var(--resume-blue);
-  padding: 4px 0 30px;
+  padding: 4px 0 22px;
 }
 
 .resume-hero-copy {
@@ -66,46 +64,6 @@
   content: "·";
   margin: 0 9px;
   color: var(--resume-blue);
-}
-
-.resume-metric-rail {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-block: 1px solid var(--resume-rule);
-}
-
-.resume-metric-rail article {
-  min-height: 82px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 7px;
-  border-right: 1px solid var(--resume-rule);
-  padding: 13px 22px;
-}
-
-.resume-metric-rail article:first-child {
-  padding-left: 0;
-}
-
-.resume-metric-rail article:last-child {
-  border-right: 0;
-}
-
-.resume-metric-rail strong {
-  color: var(--text-strong);
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 760;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.resume-metric-rail span {
-  color: #616a74;
-  font-size: 12px;
-  font-weight: 650;
-  line-height: 1.35;
 }
 
 .resume-section .section-title {
@@ -432,22 +390,6 @@
     gap: 50px;
   }
 
-  .resume-metric-rail {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .resume-metric-rail article:nth-child(2) {
-    border-right: 0;
-  }
-
-  .resume-metric-rail article:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--resume-rule);
-  }
-
-  .resume-metric-rail article:nth-child(3) {
-    padding-left: 0;
-  }
-
   .resume-project-v2 header {
     grid-template-columns: 32px minmax(0, 1fr);
   }
@@ -477,15 +419,6 @@
 
   .resume-hero-copy > p:not(.eyebrow) {
     font-size: 16px;
-  }
-
-  .resume-metric-rail article {
-    min-height: 76px;
-    padding: 12px 14px;
-  }
-
-  .resume-metric-rail strong {
-    font-size: 24px;
   }
 
   .resume-role-heading {

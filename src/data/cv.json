@@ -5,12 +5,6 @@
     "summary": "聚焦多模态模型、LLM 数据工程与生产级 MLOps。负责从数据策略、训练调优到自动评测和推理部署的完整链路，以可量化的模型收益和工程效率驱动业务落地。",
     "focus": ["Multimodal LLM", "Data Flywheel", "Model Training", "Evaluation", "Inference"]
   },
-  "metrics": [
-    { "value": "2.3T", "label": "VLM 训练 Tokens" },
-    { "value": "209.1M", "label": "训练样本交付" },
-    { "value": "14.7×", "label": "推理吞吐提升" },
-    { "value": "+14.8pp", "label": "正例召回提升" }
-  ],
   "experience": {
     "company": "字节跳动",
     "englishCompany": "ByteDance",
