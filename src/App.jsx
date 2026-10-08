@@ -17,6 +17,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="cv" element={<CV />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="projects/qwen3-8b-vocabulary-classifier" element={<Navigate to="/projects/multimodal-content-classifier" replace />} />
         <Route path="projects/:id" element={<ProjectDetail />} />
         <Route path="research" element={<Research />} />
         <Route path="research/:id" element={<ResearchDetail />} />

@@ -1,50 +1,45 @@
 {
   "projects": [
     {
-      "id": "qwen3-8b-vocabulary-classifier",
-      "name": "Qwen3-8B 改词表内容分类微调",
-      "category": "MODEL FINE-TUNING",
-      "period": "2026.02 — 2026.03",
+      "id": "multimodal-content-classifier",
+      "name": "多模态内容分类通用模型",
+      "category": "MULTIMODAL CLASSIFICATION",
+      "period": "2026 Q3 — 至今",
       "cvFeatured": true,
-      "image": "/assets/qwen-data-landscape.png",
-      "imageAlt": "汽车内容分类项目的数据样例拼图",
-      "imagePosition": "50% 18%",
-      "imageCaption": "真实业务输入覆盖标题、正文、ASR 与作者侧信息，模型最终输出唯一内容标签。",
-      "summary": "为汽车图文内容构建单 Token 生成式分类模型，以 Qwen3-8B 替代高成本、低时效的人工标签流程。",
-      "details": "项目面向 25 类汽车内容标签，将每个完整标签注册为词表中的单一 Token，再把生成空间约束为这组标签 Token，并将最大输出长度固定为 1。相比传统分类头，这套方案保留了生成模型的训练范式，同时让线上输出稳定、可解释、易扩展。",
-      "challenge": "业务文本短、信息密度不均，标签层级深且边界相近。纯 Prompt 方案容易输出额外文本，也难以稳定区分二手车、选买、用车和行业资讯等细粒度类别。",
-      "approach": "统一拼接标题、正文、ASR、作者和活动字段，基于 LLaMA-Factory 完成三阶段 SFT；训练时扩展 Qwen3-8B 词表，推理时只允许生成 25 个标签 Token，并使用 2 万条质检二确数据做后续校准。",
-      "role": "模型微调 / 分类方案设计 / 数据构建 / 推理部署",
-      "tech": ["Qwen3-8B", "SFT", "LLaMA-Factory", "Vocabulary Extension", "Merlin"],
+      "image": "/assets/multimodal-content-classifier.svg",
+      "imageAlt": "视频帧、标题、OCR 和 ASR 经通用模型、置信度服务和逐标签阈值完成内容分类的流程图",
+      "imagePosition": "50% 50%",
+      "imageCaption": "多模态输入 → 通用模型 → 输出 Token 置信度 → 逐标签阈值；低置信度结果转人工复核。",
+      "summary": "训练一个开源多模态模型处理多类内容标签，并以规则 CoT 和逐标签置信度校准支撑规模化上线。",
+      "details": "以 Qwen3.5-9B 为基座，统一处理视频帧、标题、OCR 和 ASR。用质检数据进行 SFT，并自动合成规则 CoT 样本强化标签边界。已完成 43 类阈值扫描和召回初测，约 30 类初步具备有效召回潜力。项目完成后，计划用同一模型完成 43 类的统一推理和逐类验收，对满足质量要求的类别分批上线。",
+      "challenge": "逐类训练模型会重复消耗数据和部署时间；细粒度标签边界相近，统一阈值又难以同时控制精度和召回。模型还需要在不反复传入完整规则的条件下稳定理解标签体系。",
+      "approach": "联合训练全类质检样本与自动合成的规则 CoT 样本；在 Merlin 部署开源模型，由 FaaS 读取输出 Token 概率并计算几何平均置信度。按标签校准阈值，只自动放行达到精度门槛的结果，其余交由人工复核。",
+      "role": "多模态数据构建 / 通用模型 SFT / 置信度服务 / 推理部署",
+      "tech": ["Qwen3.5-9B", "SFT", "Rule CoT", "Merlin", "FaaS", "Confidence Calibration"],
       "metrics": [
-        { "value": "12万", "label": "训练样本" },
-        { "value": "25", "label": "细粒度标签" },
-        { "value": "83%", "label": "最新 AIO" },
-        { "value": "+18pp", "label": "AIO 提升" }
+        { "value": "43", "label": "已完成阈值初测的类别" },
+        { "value": "约30", "label": "初测有召回潜力的类别" },
+        { "value": "≥95%", "label": "自动放行精度门槛" },
+        { "value": "约40%", "label": "整体 R@P95 目标" }
       ],
       "highlights": [
-        "以完整中文标签作为新增 Token，让分类任务只生成一个确定标签。",
-        "构建 10 万基础数据与 2 万质检二确数据，完成三阶段迭代训练。",
-        "统一 title、content、ASR 与作者侧字段，保证训练和线上推理输入一致。",
-        "最新版本 AIO 从 65% 提升至 83%，提升 18 个百分点。",
-        "25 个标签中 5 类达到 95%+，9 类达到 90%+ 准确率。"
+        "用质检数据 SFT 与自动合成的规则 CoT 联合训练，让一个模型学习完整标签体系和规则边界。",
+        "在 Merlin 部署开源模型，并通过 FaaS 提供输出 Token 几何平均置信度与逐标签阈值控制。",
+        "43 类已完成阈值扫描和召回初测，约 30 类初步显示有效召回潜力；后续逐类验收并分批上线。",
+        "目标在自动放行精度不低于 95% 的前提下，将整体 R@P95 从初测 36.04% 提升至约 40%。",
+        "复用训练、验收和部署流程，新增类别无需单独训练模型；项目实践中上线速度提升超过 50%。"
       ],
       "process": [
-        { "title": "输入标准化", "description": "清洗并按固定顺序组织标题、正文、ASR、作者与活动字段。" },
-        { "title": "标签 Token 化", "description": "将 25 个层级标签加入词表，初始化新增 embedding。" },
-        { "title": "三阶段 SFT", "description": "从基础数据训练到增量数据更新，再以质检二确数据校准边界。" },
-        { "title": "约束式推理", "description": "只开放标签 Token，关闭采样并限制 max_new_tokens = 1。" }
+        { "title": "多模态输入", "description": "统一整理视频帧、标题、OCR 和 ASR，并对齐标签体系。" },
+        { "title": "联合训练", "description": "用质检数据进行 SFT，自动合成规则 CoT 样本强化标签边界。" },
+        { "title": "推理与置信度", "description": "在 Merlin 部署通用模型，由 FaaS 计算输出 Token 概率的几何平均。" },
+        { "title": "逐标签验收", "description": "校准各标签阈值，达标结果自动放行，低置信度结果进入人工复核。" }
       ],
       "media": [
         {
-          "src": "/assets/qwen-llamafactory.webp",
-          "alt": "LLaMA-Factory 微调框架标识",
-          "caption": "训练框架 · LLaMA-Factory"
-        },
-        {
           "src": "/assets/qwen-merlin.png",
-          "alt": "Merlin 训练与部署平台标识",
-          "caption": "训练与部署平台 · Merlin"
+          "alt": "Merlin 模型部署平台标识",
+          "caption": "开源模型部署 · Merlin"
         }
       ]
     },

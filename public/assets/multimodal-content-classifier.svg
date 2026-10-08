@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">多模态内容分类通用模型</title>
+  <desc id="desc">视频帧、标题、OCR 和 ASR 输入 Qwen3.5-9B，经 Merlin 推理与几何平均置信度服务，按标签阈值输出分类结果。</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#edf4ff"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <linearGradient id="model" x2="1" y2="1">
+      <stop stop-color="#143b77"/>
+      <stop offset="1" stop-color="#2467bd"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#163356" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <circle cx="866" cy="86" r="132" fill="#dceaff" opacity=".7"/>
+  <circle cx="91" cy="477" r="130" fill="#e6efff" opacity=".8"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="60" y="72" fill="#1c3555" font-size="32" font-weight="700">一个模型，统一处理多类内容标签</text>
+    <text x="60" y="103" fill="#58718e" font-size="16">质检数据 SFT · 规则 CoT · 逐标签置信度校准</text>
+    <g filter="url(#shadow)">
+      <rect x="60" y="153" width="190" height="275" rx="20" fill="#fff"/>
+      <rect x="300" y="153" width="276" height="275" rx="20" fill="url(#model)"/>
+      <rect x="626" y="153" width="274" height="275" rx="20" fill="#fff"/>
+    </g>
+    <text x="86" y="195" fill="#1d3e66" font-size="19" font-weight="700">多模态输入</text>
+    <g fill="#eef4fd">
+      <rect x="84" y="218" width="142" height="36" rx="9"/>
+      <rect x="84" y="263" width="142" height="36" rx="9"/>
+      <rect x="84" y="308" width="142" height="36" rx="9"/>
+      <rect x="84" y="353" width="142" height="36" rx="9"/>
+    </g>
+    <g fill="#31577e" font-size="16" font-weight="600">
+      <text x="105" y="242">视频帧</text>
+      <text x="105" y="287">标题</text>
+      <text x="105" y="332">OCR</text>
+      <text x="105" y="377">ASR</text>
+    </g>
+    <text x="331" y="204" fill="#fff" font-size="26" font-weight="700">Qwen3.5-9B</text>
+    <text x="331" y="235" fill="#b8d5fa" font-size="15">通用多模态分类模型</text>
+    <rect x="329" y="273" width="217" height="48" rx="12" fill="#ffffff" fill-opacity=".14"/>
+    <text x="348" y="303" fill="#fff" font-size="17" font-weight="600">质检样本 SFT</text>
+    <rect x="329" y="332" width="217" height="48" rx="12" fill="#ffffff" fill-opacity=".14"/>
+    <text x="348" y="362" fill="#fff" font-size="17" font-weight="600">规则 CoT 训练</text>
+    <text x="652" y="195" fill="#1d3e66" font-size="19" font-weight="700">推理与质量控制</text>
+    <text x="652" y="239" fill="#31577e" font-size="17" font-weight="600">Merlin 部署</text>
+    <line x1="652" y1="254" x2="874" y2="254" stroke="#dbe6f3" stroke-width="2"/>
+    <text x="652" y="290" fill="#31577e" font-size="17" font-weight="600">几何平均置信度</text>
+    <line x1="652" y1="306" x2="874" y2="306" stroke="#dbe6f3" stroke-width="2"/>
+    <text x="652" y="342" fill="#31577e" font-size="17" font-weight="600">逐标签阈值</text>
+    <rect x="652" y="360" width="222" height="38" rx="10" fill="#e8f5ec"/>
+    <text x="669" y="385" fill="#217348" font-size="15" font-weight="700">达标自动分类 · 否则复核</text>
+    <g stroke="#5e89ba" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M263 290h24m-9-9 9 9-9 9"/>
+      <path d="M589 290h24m-9-9 9 9-9 9"/>
+    </g>
+    <text x="61" y="484" fill="#526e8d" font-size="15">43 类已完成阈值初测</text>
+    <text x="899" y="484" fill="#526e8d" font-size="15" text-anchor="end">目标：Precision ≥ 95% · R@P95 约 40%</text>
+  </g>
+</svg>

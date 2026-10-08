@@ -11,12 +11,12 @@
   "resumeSummary": "AI / MLOps 工程师，能把模型训练、数据生产、自动评测和推理部署串成可持续迭代的生产链路。近期在多模态召回、内容分类、Push 风控和 VLM 数据生产中落地 DPO、SFT、Agentic 数据蒸馏与批量推理优化。",
   "resumeMetrics": [
     {
-      "value": "12万",
-      "label": "分类模型训练样本"
+      "value": "43",
+      "label": "已完成阈值初测的类别"
     },
     {
-      "value": "+18pp",
-      "label": "Qwen 分类 AIO 提升"
+      "value": "约40%",
+      "label": "内容分类 R@P95 目标"
     },
     {
       "value": "3万+",
